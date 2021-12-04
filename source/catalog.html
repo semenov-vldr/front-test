@@ -10,6 +10,7 @@
 
 <body class="page-body" bgcolor="lightgrey">
 
+<!-- Header -->
   <header class="page-header">
     <a class="page-header__logo" href="##">
       <img src="./img/icons/pink-icon-mobile.svg" width="74" height="23" alt="Pink">
@@ -22,31 +23,34 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a class="site-list__item-link">Главная</a>
+            <a class="site-list__link">Главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__item-link site-list__item--current" href="catalog.html">Фотографии</a>
+            <a class="site-list__link site-list__link--current" href="catalog.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__item-link" href="form.html">Конкурс</a>
+            <a class="site-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__item-link" href="##">HTML ACADEMY</a>
+            <a class="site-list__link" href="##">HTML ACADEMY</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
+<!-- Main -->
   <main class="page-catalog">
     <h1 class="visually-hidden">Каталог "Pink"</h1>
-    <div class="cover-main__wrapper">
-      <img class="cover-main__image" src="./img/main/back-wallpaper.jpg" alt="">
+    <div class="cover-main">
+      <img class="cover-main__back-wallpaper" src="./img/main/back-wallpaper.jpg" alt="">
       <h2 class="cover-main__title">Фотографии пользователей</h2>
     </div>
-    <section class="photo-container">
+    <section class="photo">
       <h2 class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
       </h2>
+
+      <!-- Фотографии пользователей -->
       <ul class="photo__list">
 
         <li class="photo__item">
@@ -144,6 +148,7 @@
       </ul>
     </section>
 
+    <!-- Загрузка фото для поста -->
     <section class="upload">
       <h2 class="upload__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
       <div class="upload-container">
@@ -166,8 +171,11 @@
         <button class="upload__button-cancel" type="button">Отмена</button>
       </div>
     </section>
+  </main>
 
-    <footer class="page-footer__content">
+  <!-- Футер -->
+  <footer class="page-footer">
+    <div class="page-footer__content">
       <img src="./img/footer/glasses.svg" alt="glasses">
       <img src="./img/icons/pink-icon-mobile.svg" alt="pink">
       <div class="social">
@@ -196,6 +204,5 @@
         <span class="developed__text">Разработано</span>
         <img src="./img/footer/html-academy-icon.svg" alt="html-academy">
       </div>
-    </footer>
-
-  </main>
+    </div>
+  </footer>
