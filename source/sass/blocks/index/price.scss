@@ -1,0 +1,39 @@
+.price {
+  background-color: #f2f2f2;
+  padding: 127px 0 50px 0;
+
+  &__table {
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+  &__header {
+    background-color: #283645;
+  }
+
+  &__hit {
+    color: #ffffff;
+    background-color: #d22856;
+  }
+
+  &__title {
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 19px 0 35px 0;
+    font-size: 16px;
+  }
+
+  &__item-text {
+    text-transform: uppercase;
+    padding: 25px 0 25px 22px;
+  }
+
+  &__check {
+    text-align: center;
+  }
+}
+
+// Пагинация
+.slider-reviews__controls {
+  text-align: center;
+}

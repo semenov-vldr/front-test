@@ -1,0 +1,23 @@
+.contacts {
+  background-color: #ffffff;
+
+  &__wrapper {
+    text-align: center;
+  }
+
+  &__main-title {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__item {
+    text-decoration: none;
+    font-style: normal;
+    color: #d22856;
+    font-size: 24px;
+  }
+}

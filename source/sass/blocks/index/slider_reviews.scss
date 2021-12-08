@@ -1,0 +1,20 @@
+.slider-reviews {
+  background-color: #ffffff;
+
+  &__author {
+    font-family: "Open Sans", serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__quote {
+    text-align: center;
+    margin: 0;
+  }
+
+  &__dots {
+    text-align: center;
+  }
+}
