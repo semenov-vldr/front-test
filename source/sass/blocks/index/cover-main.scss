@@ -1,0 +1,67 @@
+
+.cover-main {
+
+  &__wrapper {
+    position: relative;
+    background-image: url(../../img/main/back-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 320px;
+    height: 462px;
+    background-color: #1D2631;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding-top: 95px;
+  }
+
+  &__phone {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__screen {
+    position: absolute;
+    left: 104px;
+    bottom: 57px;
+  }
+
+  &__app {
+    background-color: #1D2631;
+    padding: 28px 0 38px 0;
+  }
+
+  /* Ссылка "Скачайте приложение" */
+  &__app-link {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 18px;
+    border: 3px solid #ffffff;
+    margin-bottom: 38px;
+    padding: 21px 39px;
+    border-radius: 29px;
+  }
+
+  /* OS */
+  &__app-list {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    align-items: center;
+  }
+
+  /* Доступно для Iphone... */
+  &__app-text {
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+
+  }
+
+}

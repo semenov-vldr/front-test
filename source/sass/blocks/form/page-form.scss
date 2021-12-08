@@ -1,0 +1,90 @@
+.form {
+  background-color: #ffffff;
+
+  &__title {
+    font-size: 14px;
+    margin: 0;
+    width: 280px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    background-color: #f2f2f2;
+  }
+
+  &__user-item {
+    padding: 42px 0;
+  }
+
+  &__user-label {
+    color: #d22856;
+    padding: 0 24px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &__user-input {
+    width: 100%;
+    padding: 23px 20px;
+    box-sizing: border-box;
+  }
+
+  &__user-input[placeholder] {
+    color: #283645;
+    font-size: 18px;
+  }
+
+  /* Список достижений */
+  &__user-progress-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__user-progress-item {
+    font-size: 18px;
+  }
+
+  &__user-progress-item:not(:last-child) {
+    margin-bottom: 47px;
+  }
+
+  /* Заголовки чек-бокса, радио-кнопок и комментариев */
+  &__user-item-title {
+    text-transform: uppercase;
+    color: #d22856;
+    text-align: center;
+  }
+
+  /* Список OS */
+  &__user-OS-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__user-OS-item {
+    font-size: 18px;
+  }
+
+  &__user-comment-area {
+    width: 100%;
+  }
+
+  &__button {
+    width: 100%;
+    background-color: #2aab6d;
+    font-size: 18px;
+    border: none;
+    color: #ffffff;
+    padding: 23px 10px;
+    text-transform: uppercase;
+    margin-bottom: 46px;
+  }
+
+  &__prompt {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

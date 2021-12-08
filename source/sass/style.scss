@@ -1,1 +1,16 @@
-// Начните писать стили здесь
+@import "./main-styles.scss";
+@import "./font.scss";
+@import "./page-header.scss";
+@import "./footer.scss";
+
+// index
+@import "./blocks/index/cover-main.scss";
+@import "./blocks/index/main-information.scss";
+@import "./blocks/index/slider_reviews.scss";
+@import "./blocks/index/price.scss";
+@import "./blocks/index/contacts.scss";
+
+// catalog
+@import "./blocks/catalog/page-catalog.scss";
+@import "./blocks/catalog/upload.scss";
+@import "./blocks/form/page-form.scss"

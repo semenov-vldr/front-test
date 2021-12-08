@@ -4,179 +4,200 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./img/favicon/favicon-mobile.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-mobile-32.ico">
 </head>
 
-<body class="page-body" bgcolor="lightgrey">
+<body class="page-body">
   <!-- Header -->
   <header class="page-header">
-    <a class="page-header__logo" href="##">
-      <img src="./img/icons/pink-icon-mobile.svg" width="74" height="23" alt="Pink">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toogle" type="button" aria-label="Меню">
-        <img src="./img/main/menu-btn-mobile.svg">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Фотографии</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link site-list__link--current" href="form.html">Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="##">HTML ACADEMY</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="page-header__wrapper center">
+      <a class="page-header__logo" href="##">
+        <img src="./img/icons/pink-icon-mobile.svg" width="74" height="23" alt="Pink">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toogle" type="button" aria-label="Меню">
+          <img src="./img/main/menu-btn-mobile.svg">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="main-nav__item">
+              <a class="main-nav__item-link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="catalog.html">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link site-list__item--current" href="form.html">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="##">HTML ACADEMY</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
+
   <!-- Main -->
   <main class="page-form">
-    <h1 class="visually-hidden">Каталог "Pink"</h1>
-    <div class="cover-main">
-      <img class="cover-main__back-wallpaper" src="./img/main/back-wallpaper.jpg" alt="">
-      <h2 class="cover-main__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
-    </div>
-    <section class="form">
-      <h3 class="form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
-        бонусную карту!</h3>
-      <!-- Форма для пользователя -->
-      <form class="form__user" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="form__user-item">
-          <label class="form__user-label">Фамилия:
-            <input type="text" placeholder="Укажите фамилию *" name="surname" required>
-          </label>
-          <label class="form__user-label">Имя:
-            <input type="text" placeholder="Введите ваше имя *" name="name" required>
-          </label>
-          <label class="form__user-label">Отчество:
-            <input type="text" placeholder="Ну и отчество тоже" name="patronymic" required>
-          </label>
-        </fieldset>
-        <!-- Достижения (checkbox) -->
-        <fieldset class="form__user-item">
-          <legend class="form__user-item-title">Ваши безбашенные достижения в путешествии</legend>
-          <ul class="form__user-progress-list">
+    <h1 class="visually-hidden">Форма "Pink"</h1>
+    <section class="cover-main">
+      <div class="cover-main__wrapper center">
+        <h2 class="cover-main__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
+      </div>
 
-            <li class="form__user-progress-item">
-              <label class="form__user-control">
-                <input class="visually-hidden form__user-control-input" type="checkbox" name="Сделал селфи с акулой" checked>
-                <span class="form__user-control-mark"></span>
-                <img class="form__user-check" src="./img/icons/tick.svg" alt="tick">
-                <span class="form__user-control-label">Сделал селфи с акулой</span>
-              </label>
-            </li>
 
-            <li class="form__user-progress-item">
-              <label class="form__user-control">
-                <input class="visually-hidden form__user-control-input" type="checkbox" name="Обгорел на пляже" checked>
-                <span class="form__user-control-mark"></span>
-                <img class="form__user-progress-item-check" src="./img/icons/tick.svg" alt="tick">
-                <span class="form__user-control-label">Обгорел на пляже</span>
-              </label>
-            </li>
+      <section class="form">
+        <!-- Форма для пользователя -->
+        <form class="form__user" action="https://echo.htmlacademy.ru/" method="get">
+          <h3 class="form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
+            бонусную карту!</h3>
+          <fieldset class="form__user-item center">
+            <label class="form__user-label">Фамилия:
+              <input class="form__user-input" type="text" placeholder="Укажите фамилию *" name="surname" required>
+            </label>
+            <label class="form__user-label">Имя:
+              <input class="form__user-input" type="text" placeholder="Введите ваше имя *" name="name" required>
+            </label>
+            <label class="form__user-label">Отчество:
+              <input class="form__user-input" type="text" placeholder="Ну и отчество тоже" name="patronymic" required>
+            </label>
+          </fieldset>
+          <!-- Достижения (checkbox) -->
+          <div class="form__wrapper">
+            <fieldset class="form__user-item center">
+              <legend class="form__user-item-title">Ваши безбашенные достижения в путешествии</legend>
+              <ul class="form__user-progress-list">
 
-            <li class="form__user-progress-item">
-              <label class="form__user-control">
-                <input class="visually-hidden form__user-control-input" type="checkbox" name="Видел Чака Норриса">
-                <span class="form__user-control-mark"></span>
-                <img class="form__user-progress-item-check" src="./img/icons/tick.svg" alt="tick">
-                <span class="form__user-control-label">Видел Чака Норриса</span>
-              </label>
-            </li>
+                <li class="form__user-progress-item">
+                  <label class="form__user-control">
+                    <input class="visually-hidden form__user-control-input" type="checkbox" name="Сделал селфи с акулой"
+                      checked>
+                    <span class="form__user-control-mark"></span>
+                    <img class="form__user-check" src="./img/icons/tick.svg" alt="tick">
+                    <span class="form__user-control-label">Сделал селфи с акулой</span>
+                  </label>
+                </li>
 
-            <li class="form__user-progress-item">
-              <label class="form__user-control">
-                <input class="visually-hidden form__user-control-input" type="checkbox" name="Накупил сувениров">
-                <span class="form__user-control-mark"></span>
-                <img class="form__user-progress-item-check" src="./img/icons/tick.svg" alt="tick">
-                <span class="form__user-control-label">Накупил сувениров</span>
-              </label>
-            </li>
+                <li class="form__user-progress-item">
+                  <label class="form__user-control">
+                    <input class="visually-hidden form__user-control-input" type="checkbox" name="Обгорел на пляже"
+                      checked>
+                    <span class="form__user-control-mark"></span>
+                    <img class="form__user-progress-item-check" src="./img/icons/tick.svg" alt="tick">
+                    <span class="form__user-control-label">Обгорел на пляже</span>
+                  </label>
+                </li>
 
-            <li class="form__user-progress-item">
-              <label class="form__user-control">
-                <input class="visually-hidden form__user-control-input" type="checkbox" name="Удержал башню" checked>
-                <span class="form__user-control-mark"></span>
-                <img class="form__user-progress-item-check" src="./img/icons/tick.svg" alt="tick">
-                <span class="form__user-control-label">Удержал башню</span>
-              </label>
-            </li>
+                <li class="form__user-progress-item">
+                  <label class="form__user-control">
+                    <input class="visually-hidden form__user-control-input" type="checkbox" name="Видел Чака Норриса">
+                    <span class="form__user-control-mark"></span>
+                    <img class="form__user-progress-item-check" src="./img/icons/tick.svg" alt="tick">
+                    <span class="form__user-control-label">Видел Чака Норриса</span>
+                  </label>
+                </li>
 
-            <li class="form__user-progress-item">
-              <label class="form__user-control">
-                <input class="visually-hidden form__user-control-input" type="checkbox" name="Разгромил отель">
-                <span class="form__user-control-mark"></span>
-                <img class="form__user-progress-item-check" src="./img/icons/tick.svg" alt="tick">
-                <span class="form__user-control-label">Разгромил отель</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <!-- Контакты пользователя -->
-        <fieldset class="form__user-item">
-          <label class="form__user-label">Номер телефона
-            <input type="tel" placeholder="Номер, пожалуйста" name="phone">
-          </label>
-          <label class="form__user-label">Адрес почты
-            <input type="email" placeholder="Введите почту *" name="email" required
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-          </label>
-        </fieldset>
-        <!-- Выбор приложения (radio) -->
-        <fieldset class="form__user-item">
-          <legend class="form__user-item-title">С каким приложением путешествовали?</legend>
-          <ul class="form__user-OS-list">
+                <li class="form__user-progress-item">
+                  <label class="form__user-control">
+                    <input class="visually-hidden form__user-control-input" type="checkbox" name="Накупил сувениров">
+                    <span class="form__user-control-mark"></span>
+                    <img class="form__user-progress-item-check" src="./img/icons/tick.svg" alt="tick">
+                    <span class="form__user-control-label">Накупил сувениров</span>
+                  </label>
+                </li>
 
-            <li class="form__user-OS-item">
-              <label class="form__user-OS-control">
-                <input class="visually-hidden form__user-OS-control-input" type="radio" name="OS" value="iOS" checked>
-                <span class="form__user-OS-control-mark"></span>
-                <span class="form__user-OS-control-label">Pink для iOS</span>
-              </label>
-            </li>
+                <li class="form__user-progress-item">
+                  <label class="form__user-control">
+                    <input class="visually-hidden form__user-control-input" type="checkbox" name="Удержал башню"
+                      checked>
+                    <span class="form__user-control-mark"></span>
+                    <img class="form__user-progress-item-check" src="./img/icons/tick.svg" alt="tick">
+                    <span class="form__user-control-label">Удержал башню</span>
+                  </label>
+                </li>
 
-            <li class="form__user-OS-item">
-              <label class="form__user-OS-control">
-                <input class="visually-hidden form__user-OS-control-input" type="radio" name="OS" value="Android" checked>
-                <span class="form__user-OS-control-mark"></span>
-                <span class="form__user-OS-control-label">Pink на Android</span>
-              </label>
-            </li>
+                <li class="form__user-progress-item">
+                  <label class="form__user-control">
+                    <input class="visually-hidden form__user-control-input" type="checkbox" name="Разгромил отель">
+                    <span class="form__user-control-mark"></span>
+                    <img class="form__user-progress-item-check" src="./img/icons/tick.svg" alt="tick">
+                    <span class="form__user-control-label">Разгромил отель</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <!-- Контакты пользователя -->
+          <fieldset class="form__user-item center">
+            <label class="form__user-label">Номер телефона
+              <input class="form__user-input" type="tel" placeholder="Номер, пожалуйста" name="phone">
+            </label>
+            <label class="form__user-label">Адрес почты
+              <input class="form__user-input" type="email" placeholder="Введите почту *" name="email" required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+            </label>
+          </fieldset>
 
-            <li class="form__user-OS-item">
-              <label class="form__user-OS-control">
-                <input class="visually-hidden form__user-OS-control-input" type="radio" name="OS" value="Windows Phone" checked>
-                <span class="form__user-OS-control-mark"></span>
-                <span class="form__user-OS-control-label">Windows Phone</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <!-- Окно комментариев -->
-        <div class="form__user-comment">
-          <label class="control">Опишите свои эмоции
-            <textarea name="comment" rows="5" cols="30">Можно прям в красках, не стесняясь в выражениях</textarea>
-          </label>
-        </div>
+          <!-- Выбор приложения (radio) -->
+          <div class="form__wrapper">
+            <fieldset class="form__user-item center">
+              <legend class="form__user-item-title">С каким приложением путешествовали?</legend>
+              <ul class="form__user-OS-list">
 
-        <button class="form__button" type="button" type="submit">Отправить форму</button>
-        <span class="form__prompt">* — обязательные поля</span>
+                <li class="form__user-OS-item">
+                  <label class="form__user-OS-control">
+                    <input class="visually-hidden form__user-OS-control-input" type="radio" name="OS" value="iOS"
+                      checked>
+                    <span class="form__user-OS-control-mark"></span>
+                    <span class="form__user-OS-control-label">Pink для iOS</span>
+                  </label>
+                </li>
 
-      </form>
-    </section>
+                <li class="form__user-OS-item">
+                  <label class="form__user-OS-control">
+                    <input class="visually-hidden form__user-OS-control-input" type="radio" name="OS" value="Android"
+                      checked>
+                    <span class="form__user-OS-control-mark"></span>
+                    <span class="form__user-OS-control-label">Pink на Android</span>
+                  </label>
+                </li>
+
+                <li class="form__user-OS-item">
+                  <label class="form__user-OS-control">
+                    <input class="visually-hidden form__user-OS-control-input" type="radio" name="OS"
+                      value="Windows Phone" checked>
+                    <span class="form__user-OS-control-mark"></span>
+                    <span class="form__user-OS-control-label">Windows Phone</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <!-- Окно комментариев -->
+          <div class="form__user-item center">
+            <legend class="form__user-item-title">Опишите свои эмоции</legend>
+            <label class="form__user-control">
+              <textarea class="form__user-comment-area" name="comment"
+                rows="8">Можно прям в красках, не стесняясь в выражениях</textarea>
+            </label>
+          </div>
+          <div class="form__button-wrapper center">
+            <button class="form__button" type="button" type="submit">Отправить форму</button>
+            <span class="form__prompt">* — обязательные поля</span>
+          </div>
+
+        </form>
+      </section>
   </main>
 
   <!-- Футер -->
   <footer class="page-footer">
-    <div class="page-footer__content">
+    <div class="page-footer__wrapper center">
       <img src="./img/footer/glasses.svg" alt="glasses">
       <img src="./img/icons/pink-icon-mobile.svg" alt="pink">
       <div class="social">
@@ -207,3 +228,6 @@
       </div>
     </div>
   </footer>
+</body>
+
+</html>
