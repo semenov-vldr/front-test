@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./img/favicon/favicon-mobile.ico">
@@ -18,11 +19,11 @@
       </a>
       <nav class="main-nav">
         <button class="main-nav__toogle" type="button" aria-label="Меню">
-          <img src="./img/main/menu-btn-mobile.svg">
+          <img src="./img/main/menu-btn-mobile.svg" alt="Menu">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul class="main-nav__list reset-style-list">
             <li class="main-nav__item">
               <a class="main-nav__item-link">Главная</a>
             </li>
@@ -30,7 +31,7 @@
               <a class="main-nav__item-link" href="catalog.html">Фотографии</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item-link site-list__item--current" href="form.html">Конкурс</a>
+              <a class="main-nav__item-link main-nav__item--current" href="form.html">Конкурс</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__item-link" href="##">HTML ACADEMY</a>
@@ -49,28 +50,30 @@
         <h2 class="cover-main__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
       </div>
 
-
-      <section class="form">
+      <section class="form ">
         <!-- Форма для пользователя -->
         <form class="form__user" action="https://echo.htmlacademy.ru/" method="get">
-          <h3 class="form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
+          <h3 class="form__title center">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
+            вашу
             бонусную карту!</h3>
-          <fieldset class="form__user-item center">
-            <label class="form__user-label">Фамилия:
-              <input class="form__user-input" type="text" placeholder="Укажите фамилию *" name="surname" required>
-            </label>
-            <label class="form__user-label">Имя:
-              <input class="form__user-input" type="text" placeholder="Введите ваше имя *" name="name" required>
-            </label>
-            <label class="form__user-label">Отчество:
-              <input class="form__user-input" type="text" placeholder="Ну и отчество тоже" name="patronymic" required>
-            </label>
-          </fieldset>
+          <div class="form__wrapper center">
+            <fieldset class="form__user-item">
+              <label class="form__user-label">Фамилия:
+                <input class="form__user-input" type="text" placeholder="Укажите фамилию *" name="surname" required>
+              </label>
+              <label class="form__user-label">Имя:
+                <input class="form__user-input" type="text" placeholder="Введите ваше имя *" name="name" required>
+              </label>
+              <label class="form__user-label">Отчество:
+                <input class="form__user-input" type="text" placeholder="Ну и отчество тоже" name="patronymic" required>
+              </label>
+            </fieldset>
+          </div>
           <!-- Достижения (checkbox) -->
-          <div class="form__wrapper">
-            <fieldset class="form__user-item center">
+          <div class="form__wrapper center">
+            <fieldset class="form__user-item">
               <legend class="form__user-item-title">Ваши безбашенные достижения в путешествии</legend>
-              <ul class="form__user-progress-list">
+              <ul class="form__user-progress-list reset-style-list">
 
                 <li class="form__user-progress-item">
                   <label class="form__user-control">
@@ -132,21 +135,23 @@
             </fieldset>
           </div>
           <!-- Контакты пользователя -->
-          <fieldset class="form__user-item center">
-            <label class="form__user-label">Номер телефона
-              <input class="form__user-input" type="tel" placeholder="Номер, пожалуйста" name="phone">
-            </label>
-            <label class="form__user-label">Адрес почты
-              <input class="form__user-input" type="email" placeholder="Введите почту *" name="email" required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-            </label>
-          </fieldset>
+          <div class="form__wrapper center">
+            <fieldset class="form__user-item center">
+              <label class="form__user-label">Номер телефона
+                <input class="form__user-input" type="tel" placeholder="Номер, пожалуйста" name="phone">
+              </label>
+              <label class="form__user-label">Адрес почты
+                <input class="form__user-input" type="email" placeholder="Введите почту *" name="email" required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+              </label>
+            </fieldset>
+          </div>
 
           <!-- Выбор приложения (radio) -->
-          <div class="form__wrapper">
+          <div class="form__wrapper center">
             <fieldset class="form__user-item center">
               <legend class="form__user-item-title">С каким приложением путешествовали?</legend>
-              <ul class="form__user-OS-list">
+              <ul class="form__user-OS-list reset-style-list">
 
                 <li class="form__user-OS-item">
                   <label class="form__user-OS-control">
@@ -179,15 +184,17 @@
           </div>
 
           <!-- Окно комментариев -->
-          <div class="form__user-item center">
-            <legend class="form__user-item-title">Опишите свои эмоции</legend>
-            <label class="form__user-control">
-              <textarea class="form__user-comment-area" name="comment"
-                rows="8">Можно прям в красках, не стесняясь в выражениях</textarea>
-            </label>
+          <div class="form__wrapper center">
+            <div class="form__user-item center">
+              <legend class="form__user-item-title">Опишите свои эмоции</legend>
+              <label class="form__user-control">
+                <textarea class="form__user-comment-area" name="comment"
+                  rows="6">Можно прям в красках, не стесняясь в выражениях</textarea>
+              </label>
+            </div>
           </div>
           <div class="form__button-wrapper center">
-            <button class="form__button" type="button" type="submit">Отправить форму</button>
+            <button class="form__button green-button-form" type="submit">Отправить форму</button>
             <span class="form__prompt">* — обязательные поля</span>
           </div>
 
@@ -199,9 +206,9 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper center">
       <img src="./img/footer/glasses.svg" alt="glasses">
-      <img src="./img/icons/pink-icon-mobile.svg" alt="pink">
+      <img src="./img/footer/pink-black.png" alt="pink">
       <div class="social">
-        <ul class="social__list">
+        <ul class="social__list reset-style-list">
           <li class="social__item">
             <a class="social__link" href="##">
               <img class="social__icon" src="./img/footer/twitter-icon.svg" alt="twitter">

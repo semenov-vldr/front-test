@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./img/favicon/favicon-mobile.ico">
@@ -18,12 +19,12 @@
       </a>
       <nav class="main-nav">
         <button class="main-nav__toogle" type="button" aria-label="Меню">
-          <img src="./img/main/menu-btn-mobile.svg">
+          <img src="./img/main/menu-btn-mobile.svg" alt="Menu">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="main-nav__item site-list__item--current">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--current">
               <a class="main-nav__item-link">Главная</a>
             </li>
             <li class="main-nav__item">
@@ -48,25 +49,21 @@
     <section class="cover-main">
       <div class="cover-main__wrapper center">
         <h2 class="cover-main__title">Взгляните на жизнь иначе!</h2>
-        <img class="cover-main__phone" src="./img/main/phone-main.png" alt="Phone" width="320" height="286">
-        <img class="cover-main__screen" src="./img/main/screen-main.jpg" alt="Screen" width="111" height="197">
+        <img class="cover-main__phone" src="./img/main/iphone-hand.png" alt="Phone" width="320" height="286">
       </div>
       <!-- Скачайте приложение -->
       <div class="cover-main__app">
         <div class="cover-main__app-wrapper center">
           <a class="cover-main__app-link" href="##">Скачать приложение</a>
-          <ul class="cover-main__app-list">
+          <ul class="cover-main__app-list reset-style-list">
             <li class="cover-main__app-item">
               <img class="cover-main__app-icon" src="./img/main/apple-logo.svg" alt="apple">
-              </a>
             </li>
             <li class="cover-main__app-item">
               <img class="cover-main__app-icon" src="./img/main/android-logo.svg" alt="android">
-              </a>
             </li>
             <li class="cover-main__app-item">
               <img class="cover-main__app-icon" src="./img/main/microsoft-logo.svg" alt="microsoft">
-              </a>
             </li>
           </ul>
           <p class="cover-main__app-text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -86,7 +83,7 @@
       <div class="features">
         <div class="features__wrapper center">
           <h2 class="visually-hidden">Преимущества</h2>
-          <ul class="features__list">
+          <ul class="features__list reset-style-list">
             <li class="features__item">
               <h3 class="features__title">Поднимает настроение</h3>
               <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию <br> буквально в
@@ -107,7 +104,6 @@
           </ul>
           <div class="features__image-wrapper">
             <img class="features__iphone" src="./img/features/iphone.png" alt="iphone">
-            <img class="features__img-screen" src="./img/features/iphone-screen.jpg" alt="screen">
           </div>
         </div>
       </div>
@@ -142,7 +138,8 @@
             <tr>
               <th class="price__title" colspan="2">
                 <span class="price__hit">Хит</span>
-                Стандарт <br> 3,99 USD
+                <p class="price__title-name">Стандарт</p>
+                <p class="price__title-value">3,99 USD</p>
               </th>
             </tr>
           </thead>
@@ -168,11 +165,10 @@
       </div>
 
       <!-- Пагинация цен -->
-      <div class="slider-reviews__controls">
-        <button class="slider-reviews__controls-button" type="button" aria-label="1"></button>
-        <button class="slider-reviews__controls-button slider-reviews__controls-button--current" type="button"
-          aria-label="2"></button>
-        <button class="slider-reviews__controls-button" type="button" aria-label="3"></button>
+      <div class="price__slider">
+        <button class="price__slider-dots" type="button" aria-label="1"></button>
+        <button class="price__slider-dots price__slider-dots-current" type="button" aria-label="2"></button>
+        <button class="price__slider-dots" type="button" aria-label="3"></button>
       </div>
     </div>
 
@@ -193,7 +189,7 @@
           <address class="contacts__adress-text contacts__item">ул. Большая Конюшенная, 19/8</address>
         </p>
       </div>
-      <img class="contacts__map" src="./img/contacts/map.jpg" width="320" height="200" alt="Map">
+      <img class="contacts__map" src="./img/contacts/map.jpg" width="320" alt="Map">
     </div>
   </main>
 
@@ -201,9 +197,9 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper center">
       <img src="./img/footer/glasses.svg" alt="glasses">
-      <img src="./img/icons/pink-icon-mobile.svg" alt="pink">
+      <img src="./img/footer/pink-black.png" alt="pink">
       <div class="social">
-        <ul class="social__list">
+        <ul class="social__list reset-style-list">
           <li class="social__item">
             <a class="social__link" href="##">
               <img class="social__icon" src="./img/footer/twitter-icon.svg" alt="twitter">

@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Pink Catalog</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./img/favicon/favicon-mobile.ico">
@@ -19,16 +21,16 @@
       </a>
       <nav class="main-nav">
         <button class="main-nav__toogle" type="button" aria-label="Меню">
-          <img src="./img/main/menu-btn-mobile.svg">
+          <img src="./img/main/menu-btn-mobile.svg" alt="Menu">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul class="main-nav__list reset-style-list">
             <li class="main-nav__item">
               <a class="main-nav__item-link">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item-link site-list__item--current" href="catalog.html">Фотографии</a>
+              <a class="main-nav__item-link main-nav__item--current" href="catalog.html">Фотографии</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__item-link" href="form.html">Конкурс</a>
@@ -158,12 +160,12 @@
       <section class="upload">
         <div class="upload__wrapper center">
           <div class="upload__title-wrapper">
-          <h2 class="upload__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
-        </div>
+            <h2 class="upload__title">Затмите их всех! <br> Выкладывайте все, что накопилось в телефоне!</h2>
+          </div>
           <div class="upload__container">
             <img src="./img/photo/photo-8-mobile.jpg" width="280" height="374" alt="Фото">
             <div class="upload__filter">
-              <ul class="upload__filter-list">
+              <ul class="upload__filter-list reset-style-list">
                 <li class="upload__filter-item">
                   <img src="./img/icons/crop.svg" width="44" height="44" alt="crop">
                 </li>
@@ -176,8 +178,8 @@
               </ul>
               <input class="upload__filter-range" type="range">
             </div>
-            <button class="upload__button-post" type="button">Запостить</button>
-            <button class="upload__button-cancel" type="button">Отмена</button>
+            <button class="upload__button-post catalog-button" type="button">Запостить</button>
+            <button class="upload__button-cancel catalog-button" type="button">Отмена</button>
           </div>
         </div>
       </section>
@@ -187,9 +189,9 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper center">
       <img src="./img/footer/glasses.svg" alt="glasses">
-      <img src="./img/icons/pink-icon-mobile.svg" alt="pink">
+      <img src="./img/footer/pink-black.png" alt="pink">
       <div class="social">
-        <ul class="social__list">
+        <ul class="social__list reset-style-list">
           <li class="social__item">
             <a class="social__link" href="##">
               <img class="social__icon" src="./img/footer/twitter-icon.svg" alt="twitter">

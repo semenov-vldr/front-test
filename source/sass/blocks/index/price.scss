@@ -1,5 +1,5 @@
 .price {
-  background-color: #f2f2f2;
+  background-color: $lightgrey;
   padding: 127px 0 50px 0;
 
   &__table {
@@ -8,24 +8,38 @@
   }
 
   &__header {
-    background-color: #283645;
+    background-color: $darkblue;
   }
 
   &__hit {
     color: #ffffff;
-    background-color: #d22856;
+    background-color: $crimson;
+    line-height: 30px;
   }
 
-  &__title {
+  /* Наименование тарифа */
+  &__title-name {
     color: #ffffff;
-    text-transform: uppercase;
-    padding: 19px 0 35px 0;
     font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  /* Стоимость тарифа */
+  &__title-value {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0;
   }
 
   &__item-text {
     text-transform: uppercase;
     padding: 25px 0 25px 22px;
+    line-height: 30px;
   }
 
   &__check {
@@ -34,6 +48,6 @@
 }
 
 // Пагинация
-.slider-reviews__controls {
+.price__slider {
   text-align: center;
 }

@@ -1,11 +1,20 @@
 .upload {
-  background-color: #f2f2f2;
-  padding: 40px 0 50px 0;
+  &__title-wrapper {
+    background-color: #ffffff;
+  }
 
   &__title {
     margin: 0;
     width: 280px;
     font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__container {
+    background-color: $lightgrey;
+    padding: 20px 0 40px 0;
   }
 
   &__filter-list {
@@ -13,28 +22,24 @@
     justify-content: center;
     align-items: center;
     gap: 35px;
-    list-style-type: none;
-    padding: 0;
+    margin: 43px 0 34px 0;
+  }
+
+  &__filter-range {
+    margin-bottom: 66px;
+    width: 100%;
   }
 
   &__button-post {
     width: 100%;
-    border: 0;
-    outline: 3px solid #d22856;
-    border-radius: 30px;
-    padding: 20px 0;
-    color: #d22856;
-    font-size: 18px;
+    outline: 3px solid $crimson;
+    color: $crimson;
     margin-bottom: 12px;
   }
 
   &__button-cancel {
     width: 100%;
-    border: 0;
-    outline: 3px solid #283645;
-    border-radius: 30px;
-    padding: 20px 0;
-    color: #283645;
-    font-size: 18px;
+    outline: 3px solid rgba(40, 54, 69, 0.1);
+    color: rgba(40, 54, 69, 0.1);
   }
 }
