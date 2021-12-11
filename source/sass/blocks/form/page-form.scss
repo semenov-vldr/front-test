@@ -3,13 +3,14 @@
 
   &__title {
     font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
     margin: 0;
-    width: 280px;
     text-align: center;
   }
 
   &__wrapper {
-    background-color: #f2f2f2;
+    background-color: $lightgrey;
   }
 
   &__user-item {
@@ -17,9 +18,9 @@
   }
 
   &__user-label {
-    color: #d22856;
+    color: $crimson;
+    line-height: 30px;
     padding: 0 24px;
-    font-size: 18px;
     text-transform: uppercase;
   }
 
@@ -30,19 +31,15 @@
   }
 
   &__user-input[placeholder] {
-    color: #283645;
+    color: $darkblue;
     font-size: 18px;
   }
 
   /* Список достижений */
-  &__user-progress-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
 
   &__user-progress-item {
     font-size: 18px;
+    line-height: 30px;
   }
 
   &__user-progress-item:not(:last-child) {
@@ -52,33 +49,31 @@
   /* Заголовки чек-бокса, радио-кнопок и комментариев */
   &__user-item-title {
     text-transform: uppercase;
-    color: #d22856;
+    color: $crimson;
     text-align: center;
   }
 
   /* Список OS */
-  &__user-OS-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
   &__user-OS-item {
     font-size: 18px;
+    line-height: 30px;
   }
 
   &__user-comment-area {
     width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &__button-wrapper {
+    background-color: #ffffff;
   }
 
   &__button {
     width: 100%;
-    background-color: #2aab6d;
-    font-size: 18px;
-    border: none;
-    color: #ffffff;
     padding: 23px 10px;
-    text-transform: uppercase;
     margin-bottom: 46px;
   }
 
