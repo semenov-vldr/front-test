@@ -10,7 +10,7 @@ $lightgreen: #3dc644;
 
 $mobile-width-only: 659px;
 $tablet-width: 660px;
-$desctop-width: 1200px;
+$desktop-width: 1200px;
 
 
 html {
@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   min-width: 320px;
+  max-width: 1200px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -40,6 +41,12 @@ body {
 .center {
   padding: 0 20px;
   margin: 0 auto;
+}
+
+@media (min-width: $desktop-width) {
+  .center {
+    padding: 0 130px;
+  }
 }
 
 .visually-hidden {
@@ -68,7 +75,7 @@ img {
 }
 
 /* Кнопка "Отправить форму" */
-.green-button-form {
+.form__button--green {
   background-color: #2aab6d;
   font-size: 18px;
   font-weight: 700;
@@ -78,7 +85,7 @@ img {
 }
 
 /* Кнопки "Запостить" и "Отмена" (Каталог) */
-.catalog-button {
+.upload__button {
   border: 0;
   border-radius: 30px;
   padding: 20px 0;

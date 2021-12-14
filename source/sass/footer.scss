@@ -21,3 +21,17 @@
     padding: 15px;
   }
 }
+
+
+/* Планшет */
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .developed {
+    display: flex;
+  }
+}
