@@ -44,8 +44,8 @@
 @media (min-width: $tablet-width) {
   .photo__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 455px;
+    grid-template-columns: repeat(auto-fill, min-max(300px, 1fr));
+    min-height: 455px;
     gap: 20px;
   }
 
@@ -64,8 +64,7 @@
 @media (min-width: $desktop-width) {
   .photo__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 555px;
+    min-height: 555px;
     gap: 20px;
   }
 

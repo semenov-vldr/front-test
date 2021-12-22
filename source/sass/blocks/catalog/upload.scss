@@ -37,6 +37,17 @@
   display: none;
 }
 
+/* Кнопки "Запостить" и "Отмена" (Каталог) */
+.upload__button {
+  border: 0;
+  border-radius: 30px;
+  padding: 20px 0;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+/* Запостить */
 .upload__button--submit {
   width: 100%;
   outline: 3px solid currentColor;
@@ -44,6 +55,7 @@
   margin-bottom: 12px;
 }
 
+/* Отмена */
 .upload__button--reset {
   width: 100%;
   outline: 3px solid currentColor;
