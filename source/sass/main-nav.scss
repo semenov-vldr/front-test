@@ -4,7 +4,7 @@
   top: 66px;
   width: 100%;
   background-color: $darkblue;
-  // display: none;
+  display: none;
 }
 
 /* Список меню */
@@ -12,6 +12,7 @@
   text-align: center;
 }
 
+/* Пункт меню */
 .main-nav__item {
   background-color: $darkblue;
   padding: 15px 0;
@@ -19,6 +20,7 @@
   box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
+/* Ссылка меню */
 .main-nav__link {
   display: block;
   font-size: 18px;
@@ -49,7 +51,7 @@
   padding: 0;
 }
 
-
+/* Кнопка Бургер */
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
@@ -60,34 +62,31 @@
   border-radius: 5px;
   background-color: #ffffff;
   box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
-  transition: linear 0.2s;
+  transition: 0.2s;
 }
 
 .main-nav--closed .main-nav__toggle:hover::before {
   background-color: $crimson;
   box-shadow: 0 8px 0 0 $crimson, 0 16px 0 0 $crimson;
-  transition: linear 0.2s;
 }
 
   .main-nav--closed .main-nav__toggle:active::before {
-    // background-color: fade($crimson, 30%);
-    // box-shadow: 0 7px 0 0 fade($crimson, 30%), 0 14px 0 0 fade($crimson, 30%);
-    background-color: $crimson;
-    box-shadow: 0 8px 0 0 $crimson, 0 16px 0 0 $crimson;
-    opacity: 0.3;
+    background-color: rgba($crimson, 30%);
+    box-shadow: 0 8px 0 0 rgba($crimson, 30%), 0 16px 0 0 rgba($crimson, 30%);
   }
 
   @media (max-width: $mobile-width-only) and (min-width: $tablet-width) {
 
+    /* Скрыть пункты меню когда меню закрыто */
     .main-nav--closed .main-nav__item {
       display: none;
     }
 
-  .main-nav--nojs .main-nav--opened {
+
+  /* Кнопка навигации отсутствует, если не работает js */
+  .main-nav--nojs .main-nav__toggle {
     display: none;
   }
-
-
 
   .main-nav--nojs .main-nav__wrapper {
     position: static;
@@ -99,7 +98,12 @@
   }
 }
 
-/* Кнопка "крестик" */
+/* Показать меню при открытом состоянии */
+.main-nav--opened .main-nav__wrapper {
+  display: block;
+}
+
+/* Кнопка "крестик" при открытом состоянии*/
 .main-nav--opened .main-nav__toggle {
   &::before,
   &::after {
@@ -130,13 +134,8 @@
 
   &:active::before,
   &:active::after {
-    background-color: $crimson;
-    opacity: 0.3;
+    background-color: rgba($crimson, 30%);
   }
-}
-
-.main-nav--nojs .main-nav--toggle {
-  display: none;
 }
 
 
@@ -144,7 +143,6 @@
 @media (min-width: $tablet-width) {
   .main-nav__wrapper {
     top: 110px;
-    // display: none;
   }
 }
 
