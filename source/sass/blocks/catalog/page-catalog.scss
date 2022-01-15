@@ -1,16 +1,22 @@
 .photo {
+  position: relative;
   background-color: #ffffff;
+  margin-top: -225px;
 }
 
 .photo__title {
+  width: 280px;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
-  margin: 0;
+  margin: 0 auto;
+  padding: 54px 0 60px 0;
   text-align: center;
 }
 
 .photo__item-container {
+  // display: grid;
+  // grid-template-rows: auto;
   padding: 25px 10px 25px 17px;
 }
 
@@ -19,11 +25,46 @@
   padding: 0;
 }
 
+.photo__item-panorama--container {
+  position: relative;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+// Панорама
+.photo__item-panorama {
+  max-width: 1200px;
+}
+
+// Панорама дня
+.photo__item-top {
+  position: absolute;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: $crimson;
+  padding: 5px 20px;
+  right: 20px;
+}
+
 .photo__item {
   background-color: $lightgrey;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+// Фотографии каталога
+.photo__item-photo,
+.photo__item-panorama {
+  display: block;
+  width: 100%;
 }
 
 .photo__item-author {
+  margin: 0;
   font-weight: 700;
 }
 
@@ -33,29 +74,94 @@
   font-weight: 300;
 }
 
+.photo__item-comment {
+  margin: 0;
+}
+
+.photo__item-like-container {
+  margin-top: auto;
+}
+
 .photo__item-like-text {
   color: $crimson;
   text-transform: uppercase;
   font-size: 12px;
+  margin-left: 18px;
 }
 
 
 /* Планшет */
 @media (min-width: $tablet-width) {
+  .photo__title {
+    font-size: 18px;
+    width: 450px;
+  }
+
+  .photo__title br {
+    display: none;
+  }
+
+  .photo__item-top {
+    top: 57px;
+  }
+
+  .photo__item-container--panorama {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 25px 30px;
+  }
+
+  .photo__item-author--panorama {
+    order: -1;
+  }
+
+  .photo__item .photo__item-like-container--panorama {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    order: -1;
+  }
+
+  .photo__item-like--panorama {
+    order: 1;
+  }
+
+  .photo__item-comment--panorama {
+    grid-column: 1/-1;
+  }
+
+  .photo__item-container {
+    padding: 30px;
+  }
+
   .photo__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, min-max(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     min-height: 455px;
     gap: 20px;
   }
 
-  .photo__item:first-child {
-    grid-column: 1/3;
-    grid-row: 1/2;
+  .photo__panorama {
+    grid-column: 1/-1;
+  }
+
+  .photo__item:not(:last-child) {
+    margin-bottom: 0;
   }
 
   .photo__item-comment {
     margin: 0;
+  }
+
+  .photo__item-like-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  .photo__item-like-text {
+    order: -1;
+    margin-left: 0;
   }
 }
 
@@ -64,11 +170,23 @@
 @media (min-width: $desktop-width) {
   .photo__list {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     min-height: 555px;
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 50px;
   }
 
   .photo__item:first-child {
     grid-column: 1/4;
+  }
+
+  .photo__item-panorama--container {
+    margin-left: -130px;
+    margin-right: -130px;
+  }
+
+  .photo__item-top {
+    top: 54px;
+    right: 130px;
   }
 }

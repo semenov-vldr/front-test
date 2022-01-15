@@ -11,8 +11,6 @@
 </head>
 
 <body class="page-body">
-  <!-- убрать -->
-  <div class="line"></div>
 
   <!-- Header -->
   <section class="cover-main">
@@ -20,8 +18,14 @@
       <header class="page-header">
         <div class="page-header__wrapper center">
           <a class="page-header__logo" href="##">
-            <img src="./img/icons/pink-icon-mobile.svg" width="74" height="23" alt="Pink">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/icons/logotype-white-desktop.svg" width="147"
+                height="40">
+              <source media="(min-width: 660px)" srcset="./img/icons/logotype-white-tablet.svg" width="145" height="40">
+              <img src="./img/icons/pink-icon-mobile.svg" width="74" height="23" alt="Pink">
+            </picture>
           </a>
+          <!-- Меню -->
           <nav class="main-nav main-nav--closed main-nav--nojs">
             <button class="main-nav__toggle" type="button" aria-label="Меню">
               <span class="visually-hidden">Открыть меню</span>
@@ -45,16 +49,24 @@
           </nav>
         </div>
       </header>
-      <h2 class="cover-main__title">Взгляните на жизнь иначе!</h2>
-      <img class="cover-main__phone" src="./img/main/iphone-hand.png" alt="Phone" width="320" height="286">
+      <h2 class="cover-main__title center">Взгляните на жизнь иначе!</h2>
+      <!-- Картинка "iphone в руке" -->
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="./img/main/iphone-hand-desktop.png 1x, ./img/main/iphone-hand-desktop@2x.png 2x" width="1050"
+          height="645">
+        <source media="(min-width: 660px)"
+          srcset="./img/main/iphone-hand-tablet.png 1x, ./img/main/iphone-hand-tablet@2x.png 2x" width="660"
+          height="545">
+        <img class="cover-main__phone" src="./img/main/iphone-hand-mobile.png"
+          srcset="./img/main/iphone-hand-mobile@2x.png 2x" alt="Phone" width="320" height="286">
+      </picture>
     </div>
   </section>
 
   <!-- Main -->
   <main class="page-main">
     <h1 class="visually-hidden">Приложение "Pink"</h1>
-    <!-- Обложка -->
-
 
     <!-- Скачайте приложение -->
     <div class="cover-main__app">
@@ -88,39 +100,31 @@
         <div class="features__wrapper center">
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="features__list reset-style-list">
-            <li class="features__item">
+            <li class="features__item features__item-1">
               <h3 class="features__title">Поднимает настроение</h3>
               <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию <br> буквально в
-                несколько
-                кликов!</p>
+                несколько кликов!</p>
             </li>
-            <li class="features__item">
+            <li class="features__item features__item-2">
               <h3 class="features__title">Меняет мир вокруг</h3>
               <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить
                 эффект</p>
             </li>
-            <li class="features__item">
+            <li class="features__item features__item-3">
               <h3 class="features__title">Заводит новых друзей</h3>
               <p class="features__text">Ставьте лайки, комментируйте, <br> делитесь фотографиями с друзьями и заводите
-                новых
-              </p>
+                новых</p>
             </li>
           </ul>
           <div class="features__image-wrapper">
-            <img class="features__iphone" src="./img/features/iphone.png" width="157" alt="iphone">
+            <picture>
+              <source media="(min-width: 660px)"
+                srcset="./img/features/iphone-mobile.png 1x, ./img/features/iphone-mobile@2x.png 2x" width="268"
+                height="547">
+              <img class="features__iphone" src="./img/features/iphone-mobile.png"
+                srcset="./img/features/iphone-mobile@2x.png 2x" width="157" height="157" alt="iphone">
+            </picture>
           </div>
-          <div class="features__images-desctop">
-            <div class="features__image-1">
-              <img class="features__iphone" src="./img/features/iphone-1-shadow.png" width="300" alt="iphone">
-            </div>
-            <div class="features__image-2">
-              <img class="features__iphone" src="./img/features/iphone-2-shadow.png" width="300" alt="iphone">
-            </div>
-            <div class="features__image-3">
-              <img class="features__iphone" src="./img/features/iphone-3-shadow.png" width="300" alt="iphone">
-            </div>
-          </div>
-
         </div>
 
         <div class="features__study center">
@@ -166,7 +170,7 @@
       <div class="price__wrapper center">
 
         <!-- Таблица цен для мобильной версии -->
-        <table class="price__table">
+        <!-- <table class="price__table">
           <thead class="price__header">
             <tr>
               <th class="price__title" colspan="2">
@@ -194,7 +198,7 @@
               <img src="./img/price/no.svg" alt="no">
             </td>
           </tr>
-        </table>
+        </table> -->
 
         <!-- Полная таблица цен -->
         <table class="price__table-full">
@@ -283,14 +287,26 @@
           <address class="contacts__adress-text contacts__item">ул. Большая <br> Конюшенная, 19/8</address>
         </div>
       </div>
-      <img class="contacts__map" src="./img/contacts/map.jpg" width="320" alt="Map">
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="./img/contacts/map-desktop.jpg 1x, ./img/contacts/map@2x-desktop.jpg 2x" width="1200" height="502">
+        <source media="(min-width: 660px)"
+          srcset="./img/contacts/map-tablet.jpg 1x, ./img/contacts/map@2x-tablet.jpg 2x" width="660" height="374">
+        <img class="contacts__map" src="./img/contacts/map-mobile.jpg" srcset="./img/contacts/map@2x-mobile.jpg 2x"
+          width="320" height="200" alt="Map">
+      </picture>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="page-footer">
     <div class="page-footer__wrapper center">
-      <img class="page__footer-logo" src="./img/footer/footer-logo.svg" width="145" height="40" alt="pink">
+      <a class="page-footer__logo" href="##">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/icons/logotype-blue-desktop.svg" width="147" height="40">
+          <img class="page__footer-logo" src="./img/footer/footer-logo.svg" width="145" height="40" alt="pink">
+        </picture>
+      </a>
       <div class="social">
         <ul class="social__list reset-style-list">
           <li class="social__item">
