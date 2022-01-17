@@ -92,6 +92,14 @@
 
 /* Планшет */
 @media (min-width: $tablet-width) {
+  .cover-main__title-catalog {
+    font-size: 50px;
+    line-height: 68px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .photo__title {
     font-size: 18px;
     width: 450px;

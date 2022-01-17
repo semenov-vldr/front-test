@@ -49,19 +49,22 @@
   &:active {
     background-color: rgba($darkblue, 0.1);
   }
-}
 
-.slider-reviews__button--current {
-  padding: 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 3px solid $darkblue;
 
-  &:hover,
-  &:active {
+  // Активный элемент пагинации
+  &--current {
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    // transform: scale(2);
     background-color: transparent;
+    border: 3px solid $darkblue;
+
+    &:hover,
+    &:active {
+      background-color: transparent;
+    }
   }
 }
 
@@ -108,28 +111,29 @@
 @media (min-width: $desktop-width) {
   .slider-reviews__wrapper {
     position: relative;
+  }
 
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      background-image: url(../img/reviews/left-arrow.svg);
-      width: 22px;
-      height: 41px;
-      top: 50%;
-      cursor: pointer;
-    }
+  .slider-reviews__arrows-right,
+  .slider-reviews__arrows-left {
+    position: absolute;
+    background-image: url(../img/reviews/left-arrow.svg);
+    width: 22px;
+    height: 41px;
+    top: 50%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
 
-    // Стрелка влево
-    &::before {
-      left: 0;
-    }
+  // Стрелка влево
+  .slider-reviews__arrows-left {
+    left: 0;
+  }
 
-    // Стрелка вправо
-    &::after {
-      right: 0;
-      transform: rotate(180deg);
-    }
+  // Стрелка вправо
+  .slider-reviews__arrows-right {
+    right: 0;
+    transform: rotate(180deg);
   }
 
   .slider-reviews__quote-text {

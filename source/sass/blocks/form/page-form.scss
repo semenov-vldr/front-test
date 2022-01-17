@@ -6,7 +6,6 @@
 
 .form__user {
   display: grid;
-  // grid-template-columns: repeat(auto-fill, minmax(276px, 1fr));
 }
 
 .form__title {
@@ -41,12 +40,25 @@
 
 input, textarea {
   border: 2px solid #E5E5E5;
+
+  &:focus {
+    border-color: $crimson;
+  }
+
+  &:hover {
+    border-color: $darkblue;
+  }
 }
+
 
 .form__user-label {
   color: $crimson;
   line-height: 30px;
   text-transform: uppercase;
+
+  &--contact {
+    margin-left: 24px;
+  }
 }
 
 .form__user-input {
@@ -120,10 +132,6 @@ input, textarea {
   &--contact {
     display: none;
   }
-}
-
-.form__user-label--contact {
-  margin-left: 24px;
 }
 
 .form__user-OS-list {
@@ -204,12 +212,25 @@ input, textarea {
   border: none;
   color: #ffffff;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #1C9B5E;
+  }
+
+  &:active {
+    color: rgba(#ffffff, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 .form__button {
   width: 100%;
   padding: 23px 10px;
   margin-bottom: 46px;
+  cursor: pointer;
 }
 
 // Надпись "Обязательные поля"
@@ -227,7 +248,7 @@ input, textarea {
 
 /* Планшет */
 @media (min-width: $tablet-width) {
-  .cover-form__title {
+  .cover-main__title-form {
     font-size: 50px;
     width: 620px;
   }
@@ -252,6 +273,26 @@ input, textarea {
   .form__wrapper {
     background-color: #ffffff;
     margin: 0;
+
+    &--name {
+      order: 1;
+    }
+
+    &--progress {
+      order: 4;
+    }
+
+    &--contact {
+      order: 3;
+    }
+
+    &--OS {
+      order: 2;
+    }
+
+    &--comment {
+      order: 5;
+    }
   }
 
   .form__user-item {
@@ -267,6 +308,10 @@ input, textarea {
     &--contact {
       gap: 30px;
     }
+
+    &--name {
+      padding: 0;
+    }
   }
 
   .form__user-item-title {
@@ -276,10 +321,6 @@ input, textarea {
     &--contact {
       display: block;
     }
-  }
-
-  .form__user-item--name {
-    padding: 0;
   }
 
   .form__user-label {
@@ -301,7 +342,7 @@ input, textarea {
       width: 59px;
       height: 59px;
       right: 2px;
-      bottom: 2px;
+      top: 2px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: 20px auto;
@@ -326,24 +367,8 @@ input, textarea {
     margin: 0;
   }
 
-  .form__wrapper--name {
+  .form__user-label--contact {
     order: 1;
-  }
-
-  .form__wrapper--progress {
-    order: 4;
-  }
-
-  .form__wrapper--contact {
-    order: 3;
-  }
-
-  .form__wrapper--OS {
-    order: 2;
-  }
-
-  .form__wrapper--comment {
-    order: 5;
   }
 
   .form__user-comment-area {
@@ -369,32 +394,34 @@ input, textarea {
 /* Desktop */
 @media (min-width: $desktop-width) {
   .form__user {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     gap: 54px 74px;
     align-items: center;
-  }
-
-  .form__wrapper {
-    padding: 0 130px;
+    margin: 0 auto;
+    width: 1200px;
   }
 
   .form__title, .form__wrapper, .form__button-wrapper {
     grid-column: 1 / -1;
   }
 
-  .form__wrapper--name {
-    grid-column: 1/2;
-    padding: 0;
-    padding-left: 130px;
+  .form__wrapper {
+    padding: 0 130px;
+
+    &--name {
+      grid-column: 1/2;
+      padding: 0;
+      padding-left: 130px;
+    }
+
+    &--OS {
+      grid-column: 2/3;
+      padding: 0;
+      padding-right: 130px;
+    }
   }
 
-  .form__wrapper--OS {
-    grid-column: 2/3;
-    padding: 0;
-    padding-right: 130px;
-  }
 
   .form__user-item--contact {
     flex-direction: row;
@@ -408,12 +435,22 @@ input, textarea {
 
   .form__user-progress-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 35px;
   }
 
-  .form__user-progress-item:not(:last-child) {
-    margin-bottom: 0;
+  .form__user-progress-item {
+    &:nth-child(even) {
+      order: 2;
+    }
+
+    &:nth-child(odd) {
+      order: 1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 
   .form__user-comment-area {

@@ -1,70 +1,140 @@
+/* Cама секция */
 .price {
+  margin: 0 auto;
+  padding: 109px 0 31px;
   background-color: $lightgrey;
-  padding: 127px 0 30px 0;
-  overflow: hidden;
-}
+  position: relative;
 
-// Убираем padding в мобильной версии
-@media (max-width: $mobile-width-only) {
-  .price__wrapper {
-    padding: 0;
+  /* Делаем скошенный угол */
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 88px;
+    background-image: url(../img/price/price-triangle.svg);
+    background-size: 100% 25px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
   }
 }
 
-.price__header {
-  background-color: $darkblue;
-  padding: 20px 20px 35px 20px;
-}
-
-.price__table-full {
-  overflow: hidden;
-}
-
-.price__hit {
-  position: absolute;
-  left: -30px;
-  padding: 0 20px;
-  width: 100px;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: 400;
-  background-color: $crimson;
+/* Начало стилей для обертки над таблицей */
+.price__wrapper {
   line-height: 30px;
+  text-transform: uppercase;
+  overflow: hidden;
+  width: 100vw;
+}
+
+/* Смещаем таблицу на моб версии чтоб создать нудный эффект */
+.price__table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: left 0.4s linear;
+}
+
+.table-price {
+  width: 835px;
+  border-spacing: 0;
+}
+
+.table-price__title {
+  position: relative;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: $darkblue;
+  border-right: 2px solid #e5e5e5;
+  padding: 12px 0 26px;
+  overflow: hidden;
+
+  /* Убираем первую ячейку */
+  &:first-child {
+    display: none;
+    border-right: 0;
+    border-bottom: 2px solid #e5e5e5;
+    background-color: transparent;
+  }
+
+  &:last-child {
+    border-right-color: $darkblue;
+  }
+}
+
+.table-price__title--hit::before {
+  /* Cчитываем с атрибута текст ХИТ и стилизуем */
+  content: attr(data-hit-text);
+  position: absolute;
+  top: 17px;
+  left: -26px;
+  width: 105px;
+  height: 25px;
+  font-size: 14px;
+  line-height: 30px;
+  background-color: $crimson;
   transform: rotate(-45deg);
 }
 
-.price__title {
-  padding: 12px 20px 27px 22px;
-  overflow: hidden;
+.table-price__tariff,
+.table-price__value {
+  display: block;
 }
 
-/* Наименование тарифа */
-.price__title-name {
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 30px;
+.table-price__tariff {
   font-weight: 700;
-  text-transform: uppercase;
-  margin: 0;
+  font-size: 16px;
 }
 
-/* Стоимость тарифа */
-.price__title-value {
-  font-size: 18px;
-  line-height: 30px;
+.table-price__value {
   font-weight: 300;
-  color: #ffffff;
-  margin: 0;
+  font-size: 18px;
 }
 
-.price__item-text {
-  text-transform: uppercase;
-  padding: 15px 0 15px 22px;
-  line-height: 30px;
+.table-price__cell {
+  padding: 15px 18px 14px 22px;
+  border-right: 2px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+  background-color: #ffffff;
+
+  &:first-child {
+    display: none;
+    border-left: 2px solid #e5e5e5;
+  }
 }
 
-.price__check {
-  text-align: center;
+.table-price__feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::before {
+    content: attr(data-feature-name);
+  }
+}
+
+.table-price__feature-value {
+  /* Общие стили для иконок в таблице */
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+
+  /* Сами иконки */
+  &--true {
+    width: 31px;
+    height: 23px;
+    background-image: url(../img/price/yes.svg);
+  }
+
+  &--false {
+    width: 27px;
+    height: 27px;
+    background-image: url(../img/price/no.svg);
+  }
 }
 
 // Пагинация
@@ -111,44 +181,106 @@
   }
 }
 
-.price__table-full {
-  display: table;
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #ffffff;
-  margin-bottom: 70px;
-}
-
-.price__table-full td {
-  border: 2px solid #e5e5e5;
-}
-
-.price__header th {
-  width: 25%;
-}
-
-.price__title--empty {
-  background-color: $lightgrey;
-  border: none;
-}
-
-.price__title--standart {
-  position: relative;
-}
-
-.price__hit {
-  left: -30px;
-}
-
-.price__item-text {
-  padding-left: 15px;
-  text-transform: capitalize;
-}
-
-
-/* Планшет */
+/* Изменения таблицы на разных экранах */
 @media (min-width: $tablet-width) {
+  .price {
+    width: 100%;
+    padding: 112px 0 65px;
+
+    &::after {
+      background-size: 100% 55px;
+    }
+  }
+
+  .price__wrapper {
+    width: auto;
+  }
+
+  .price__table {
+    position: static;
+    left: auto;
+    transform: none;
+  }
+
+  .table-price {
+    width: 100%;
+  }
+
+  .table-price__title {
+    padding: 10px 0 8px;
+
+    &:first-child {
+      display: table-cell;
+    }
+  }
+
+  .table-price__title--hit::before {
+    width: 85px;
+    top: 10px;
+    left: -24px;
+  }
+
+  .table-price__cell {
+    padding: 8px 15px;
+    width: 25%;
+
+    &:first-child {
+      display: table-cell;
+      text-transform: none;
+    }
+  }
+
+  .table-price__feature {
+    justify-content: center;
+
+    &::before {
+        content: "";
+    }
+  }
+
   .price__slider {
     display: none;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .container {
+    padding: 0 130px;
+  }
+
+  .price {
+    padding: 150px 0 95px;
+
+    &::after {
+      background-size: 100% 88px;
+    }
+  }
+
+  .table-price__title {
+    padding: 16px 0 22px;
+
+    &--hit::before {
+      width: 120px;
+      top: 16px;
+      left: -30px;
+    }
+  }
+
+  .table-price__tariff {
+    font-size: 18px;
+  }
+
+  .table-price__value {
+    font-size: 24px;
+  }
+
+  .table-price__cell {
+    padding: 14px 20px;
+
+    &:first-child {
+      padding: 15px 20px;
+      font-size: 18px;
+    }
   }
 }

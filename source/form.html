@@ -56,9 +56,10 @@
     <h1 class="visually-hidden">Форма "Pink"</h1>
     <section class="form">
       <!-- Форма для пользователя -->
-      <form class="form__user" action="https://echo.htmlacademy.ru/" method="get">
+      <form class="form__user" action="https://echo.htmlacademy.ru/" method="post">
         <h3 class="form__title center">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
           вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></h3>
+          <!-- ФИО пользователя -->
         <div class="form__wrapper form__wrapper--name center">
           <fieldset class="form__user-item form__user-item--name">
             <label class="form__user-label">Фамилия:
@@ -130,12 +131,12 @@
             <legend class="form__user-item-title form__user-item-title--contact">Контактная информация</legend>
             <div class="form__user-item-input form__user-item-input--tel">
               <label class="form__user-label form__user-label--contact" id="form-num">Номер телефона</label>
-              <input class="form__user-input form__user-input" for="form-num" type="tel"
+              <input class="form__user-input form__user-input--contact" for="form-num" type="tel"
                 placeholder="Номер, пожалуйста" name="phone">
             </div>
             <div class="form__user-item-input form__user-item-input--email">
               <label class="form__user-label form__user-label--contact" id="form-mail">Адрес почты</label>
-              <input class="form__user-input form__user-input" for="form-mail" type="email"
+              <input class="form__user-input form__user-input--contact" for="form-mail" type="email"
                 placeholder="Введите почту *" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
             </div>
           </fieldset>

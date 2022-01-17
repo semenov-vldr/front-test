@@ -96,7 +96,7 @@
         </div>
       </div>
       <!-- Преимущества -->
-      <div class="features">
+      <section class="features">
         <div class="features__wrapper center">
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="features__list reset-style-list">
@@ -116,19 +116,10 @@
                 новых</p>
             </li>
           </ul>
-          <div class="features__image-wrapper">
-            <picture>
-              <source media="(min-width: 660px)"
-                srcset="./img/features/iphone-mobile.png 1x, ./img/features/iphone-mobile@2x.png 2x" width="268"
-                height="547">
-              <img class="features__iphone" src="./img/features/iphone-mobile.png"
-                srcset="./img/features/iphone-mobile@2x.png 2x" width="157" height="157" alt="iphone">
-            </picture>
-          </div>
         </div>
 
         <div class="features__study center">
-          <img class="features__study-timer" src="./img/features/timer.png" width="238" height="276" alt="timer">
+          <!-- <img class="features__study-timer" src="./img/features/timer.png" width="238" height="276" alt="timer"> -->
           <div class="features__study-information">
             <h3 class="features__study-title">Эффект на 24 часа!</h3>
             <p class="features__study-text">Британские ученые провели исследования и <br> доказали, что положительный
@@ -137,7 +128,7 @@
             <a class="features__study-link" href="##">Узнать больше об исследовании</a>
           </div>
         </div>
-      </div>
+      </section>
     </section>
 
     <!-- Отзывы -->
@@ -161,114 +152,114 @@
           <button class="slider-reviews__button" type="button" aria-label="2"></button>
           <button class="slider-reviews__button" type="button" aria-label="3"></button>
         </div>
+        <div class="slider-reviews__arrows">
+          <button class="slider-reviews__arrows-right" type="button" aria-label="next"></button>
+          <button class="slider-reviews__arrows-left" type="button" aria-label="prev"></button>
+        </div>
       </div>
     </section>
 
     <!-- Цены -->
-    <div class="price">
-      <h2 class="visually-hidden">Стоимость приложения</h2>
+    <section class="price">
+      <h2 class="visually-hidden">Варианты подписок</h2>
+      <!-- Центровщик -->
       <div class="price__wrapper center">
-
-        <!-- Таблица цен для мобильной версии -->
-        <!-- <table class="price__table">
-          <thead class="price__header">
+        <!-- Таблица -->
+        <table class="price__table table-price">
+          <!-- Шапка таблицы -->
+          <thead>
             <tr>
-              <th class="price__title" colspan="2">
-                <span class="price__hit">Хит</span>
-                <p class="price__title-name">Стандарт</p>
-                <p class="price__title-value">3,99 USD</p>
+              <th class="table-price__title"></th>
+              <th class="table-price__title">
+                <span class="table-price__tariff">База</span>
+                <span class="table-price__value">1,99 USD</span>
+              </th>
+              <th class="table-price__title table-price__title--hit" data-hit-text="Хит">
+                <span class="table-price__tariff table-price__tariff--popular">Стандарт</span>
+                <span class="table-price__value">3,99 USD</span>
+              </th>
+              <th class="table-price__title">
+                <span class="table-price__tariff">Анлим</span>
+                <span class="table-price__value">9,99 USD</span>
               </th>
             </tr>
           </thead>
-          <tr>
-            <td class="price__item-text">Розовый фильтр</td>
-            <td class="price__check">
-              <img src="./img/price/yes.svg" alt="yes">
-            </td>
-          </tr>
-          <tr>
-            <td class="price__item-text">Смайлики</td>
-            <td class="price__check">
-              <img src="./img/price/yes.svg" alt="yes">
-            </td>
-          </tr>
-          <tr>
-            <td class="price__item-text">Комментарии</td>
-            <td class="price__check">
-              <img src="./img/price/no.svg" alt="no">
-            </td>
-          </tr>
-        </table> -->
-
-        <!-- Полная таблица цен -->
-        <table class="price__table-full">
-          <thead class="price__header">
+          <!-- Основная часть таблицы -->
+          <tbody>
             <tr>
-              <th class="price__title--empty"></th>
-              <th class="price__title">
-                <p class="price__title-name">База</p>
-                <p class="price__title-value">1,99 USD</p>
-              </th>
-              <th class="price__title price__title--standart">
-                <span class="price__hit">Хит</span>
-                <p class="price__title-name">Стандарт</p>
-                <p class="price__title-value">3,99 USD</p>
-              </th>
-              <th class="price__title">
-                <p class="price__title-name">АНЛИМ</p>
-                <p class="price__title-value">9,99 USD</p>
-              </th>
+              <td class="table-price__cell">Розовый фильтр</td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                  <span class="table-price__feature-value table-price__feature-value--true"><span
+                      class="visually-hidden">Да</span></span>
+                </div>
+              </td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                  <span class="table-price__feature-value table-price__feature-value--true"><span
+                      class="visually-hidden">Да</span></span>
+                </div>
+              </td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                  <span class="table-price__feature-value table-price__feature-value--true"><span
+                      class="visually-hidden">Да</span></span>
+                </div>
+              </td>
             </tr>
-
-          </thead>
-          <tr>
-            <td class="price__item-text">Розовый фильтр</td>
-            <td class="price__check">
-              <img src="./img/price/yes.svg" alt="yes">
-            </td>
-            <td class="price__check">
-              <img src="./img/price/yes.svg" alt="yes">
-            </td>
-            <td class="price__check">
-              <img src="./img/price/yes.svg" alt="yes">
-            </td>
-
-          </tr>
-          <tr>
-            <td class="price__item-text">Смайлики</td>
-            <td class="price__check">
-              <img src="./img/price/no.svg" alt="no">
-            </td>
-            <td class="price__check">
-              <img src="./img/price/yes.svg" alt="yes">
-            </td>
-            <td class="price__check">
-              <img src="./img/price/yes.svg" alt="yes">
-            </td>
-          </tr>
-          <tr>
-            <td class="price__item-text">Комментарии</td>
-            <td class="price__check">
-              <img src="./img/price/no.svg" alt="no">
-            </td>
-            <td class="price__check">
-              <img src="./img/price/no.svg" alt="no">
-            </td>
-            <td class="price__check">
-              <img src="./img/price/yes.svg" alt="yes">
-            </td>
-          </tr>
-
+            <tr>
+              <td class="table-price__cell">Смайлики</td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Смайлики">
+                  <span class="table-price__feature-value table-price__feature-value--false"><span
+                      class="visually-hidden">Нет</span></span>
+                </div>
+              </td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Смайлики">
+                  <span class="table-price__feature-value table-price__feature-value--true"><span
+                      class="visually-hidden">Да</span></span>
+                </div>
+              </td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Смайлики">
+                  <span class="table-price__feature-value table-price__feature-value--true"><span
+                      class="visually-hidden">Да</span></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="table-price__cell">Комментарии</td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Комментарии">
+                  <span class="table-price__feature-value table-price__feature-value--false"><span
+                      class="visually-hidden">Нет</span></span>
+                </div>
+              </td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Комментарии">
+                  <span class="table-price__feature-value table-price__feature-value--false"><span
+                      class="visually-hidden">Нет</span></span>
+                </div>
+              </td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Комментарии">
+                  <span class="table-price__feature-value table-price__feature-value--true"><span
+                      class="visually-hidden">Да</span></span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
-      <!-- Пагинация цен -->
-      <div class="price__slider">
-        <button class="price__slider-dots" type="button" aria-label="1"></button>
-        <button class="price__slider-dots price__slider-dots-current" type="button" aria-label="2"></button>
-        <button class="price__slider-dots" type="button" aria-label="3"></button>
-      </div>
+    <!-- Пагинация цен -->
+    <div class="price__slider">
+      <button class="price__slider-dots" type="button" aria-label="1"></button>
+      <button class="price__slider-dots price__slider-dots-current" type="button" aria-label="2"></button>
+      <button class="price__slider-dots" type="button" aria-label="3"></button>
     </div>
+    </section>
 
     <!-- Контакты -->
     <div class="contacts">
