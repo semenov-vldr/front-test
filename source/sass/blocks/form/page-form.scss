@@ -12,7 +12,6 @@
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
-  margin: 0;
   padding-top: 54px;
   text-align: center;
 }
@@ -38,7 +37,7 @@
   padding: 44px 0;
 }
 
-input, textarea {
+.form__user-input, .form__user-comment-area {
   border: 2px solid #E5E5E5;
 
   &:focus {
@@ -128,32 +127,33 @@ input, textarea {
   text-align: center;
   padding-top: 44px;
   white-space: nowrap;
+  word-break: break-all;
 
   &--contact {
     display: none;
   }
 }
 
-.form__user-OS-list {
+.form__user-os-list {
   display: flex;
   flex-direction: column;
   row-gap: 38px;
 }
 
-/* Пункты OS (radio) */
-.form__user-OS-item {
+/* Пункты os (radio) */
+.form__user-os-item {
   font-size: 18px;
   line-height: 30px;
 }
 
-.form__user-OS-control {
+.form__user-os-control {
   display: flex;
   align-items: center;
   column-gap: 31px;
 }
 
 // Круг для radio
-.form__user-OS-control-mark {
+.form__user-os-control-mark {
   display: inline-block;
   position: relative;
   width: 37px;
@@ -172,7 +172,7 @@ input, textarea {
   }
 }
 
-.form__user-OS-control-input:checked + .form__user-OS-control-mark::before {
+.form__user-os-control-input:checked + .form__user-os-control-mark::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -200,7 +200,7 @@ input, textarea {
   line-height: 30px;
 }
 
-/* Кнопка "Отправить форму" */
+/* Обертка кнопки "Отправить форму" */
 .form__button-wrapper {
   background-color: #ffffff;
 }
@@ -231,6 +231,7 @@ input, textarea {
   padding: 23px 10px;
   margin-bottom: 46px;
   cursor: pointer;
+  word-break: break-all;
 }
 
 // Надпись "Обязательные поля"
@@ -238,6 +239,7 @@ input, textarea {
   display: block;
   text-transform: uppercase;
   text-align: center;
+  word-break: break-all;
 
   // Звездочка (*)
   & span {
@@ -286,7 +288,7 @@ input, textarea {
       order: 3;
     }
 
-    &--OS {
+    &--os {
       order: 2;
     }
 
@@ -415,7 +417,7 @@ input, textarea {
       padding-left: 130px;
     }
 
-    &--OS {
+    &--os {
       grid-column: 2/3;
       padding: 0;
       padding-right: 130px;

@@ -4,7 +4,6 @@
   background-color: #1d2631;
   background-image: url(../img/main/back-wallpaper.jpg);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
@@ -46,6 +45,7 @@
   border-radius: 29px;
   width: 280px;
   margin: 0 auto 38px;
+  word-break: break-all;
 
   &:hover {
     background-color: #ffffff;
@@ -63,6 +63,7 @@
   gap: 35px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Доступно для Iphone... */
@@ -95,6 +96,14 @@
     font-size: 40px;
     line-height: 48px;
     margin-top: 81px;
+  }
+
+  .cover-main__title-catalog {
+    font-size: 50px;
+    line-height: 68px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .cover-main__phone {

@@ -15,8 +15,6 @@
 }
 
 .photo__item-container {
-  // display: grid;
-  // grid-template-rows: auto;
   padding: 25px 10px 25px 17px;
 }
 
@@ -78,28 +76,39 @@
   margin: 0;
 }
 
-.photo__item-like-container {
-  margin-top: auto;
+// Кнопка like
+.photo__item-like-button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin-top: 17px;
+  column-gap: 18px;
+  cursor: pointer;
+
+  // Сердечко
+  &::before {
+    content: "";
+    background-image: url(../img/icons/heart.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 13px 12px;
+    width: 13px;
+    height: 12px;
+    left: 0;
+  }
 }
 
 .photo__item-like-text {
   color: $crimson;
   text-transform: uppercase;
   font-size: 12px;
-  margin-left: 18px;
 }
 
 
 /* Планшет */
 @media (min-width: $tablet-width) {
-  .cover-main__title-catalog {
-    font-size: 50px;
-    line-height: 68px;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .photo__title {
     font-size: 18px;
     width: 450px;
@@ -119,15 +128,14 @@
     padding: 25px 30px;
   }
 
-  .photo__item-author--panorama {
-    order: -1;
+  .photo__item-like-button--panorama {
+    margin-left: auto;
+    margin-top: 0;
+    order: 0;
   }
 
-  .photo__item .photo__item-like-container--panorama {
-    display: flex;
-    justify-content: end;
-    gap: 16px;
-    order: -1;
+  .photo__item-comment--panorama {
+    order: 1;
   }
 
   .photo__item-like--panorama {
@@ -159,12 +167,6 @@
 
   .photo__item-comment {
     margin: 0;
-  }
-
-  .photo__item-like-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
   }
 
   .photo__item-like-text {

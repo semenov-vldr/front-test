@@ -68,6 +68,10 @@
   }
 }
 
+.slider-reviews__arrows {
+  display: none;
+}
+
 
 /* Планшет */
 @media (min-width: $tablet-width) {
@@ -109,31 +113,41 @@
 
 /* Desktop */
 @media (min-width: $desktop-width) {
-  .slider-reviews__wrapper {
-    position: relative;
+  .slider-reviews__arrows {
+    display: block;
   }
 
-  .slider-reviews__arrows-right,
-  .slider-reviews__arrows-left {
+  // Стрелки
+  .slider-reviews__arrow {
     position: absolute;
     background-image: url(../img/reviews/left-arrow.svg);
+    background-repeat: no-repeat;
     width: 22px;
     height: 41px;
     top: 50%;
     border: none;
     background-color: transparent;
+    opacity: 0.3;
     cursor: pointer;
-  }
 
-  // Стрелка влево
-  .slider-reviews__arrows-left {
-    left: 0;
-  }
+    // Стрелка влево
+    &--left {
+      left: 130px;
+    }
 
-  // Стрелка вправо
-  .slider-reviews__arrows-right {
-    right: 0;
-    transform: rotate(180deg);
+    // Стрелка вправо
+    &--right {
+      right: 130px;
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   .slider-reviews__quote-text {

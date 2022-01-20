@@ -4,18 +4,18 @@
 @import "./font.scss";
 @import "./page-header.scss";
 @import "./main-nav.scss";
-@import "./footer.scss";
+@import "./page-footer.scss";
 @import "./footer-social.scss";
 
 // index
 @import "./blocks/index/cover-main.scss";
 @import "./blocks/index/main-information.scss";
 @import "./blocks/index/features.scss";
-@import "./blocks/index/slider_reviews.scss";
+@import "./blocks/index/slider-reviews.scss";
 @import "./blocks/index/price.scss";
 @import "./blocks/index/contacts.scss";
 
 // catalog
-@import "./blocks/catalog/page-catalog.scss";
+@import "./blocks/catalog/photo.scss";
 @import "./blocks/catalog/upload.scss";
 @import "./blocks/form/page-form.scss"

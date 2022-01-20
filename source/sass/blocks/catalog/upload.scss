@@ -34,6 +34,7 @@
   justify-content: center;
   align-items: center;
   gap: 35px;
+  flex-wrap: wrap;
   margin: 43px 0 34px 0;
 }
 
@@ -58,13 +59,13 @@
 }
 
 // Range
-input[type=range] {
+.upload__filter-range {
   -webkit-appearance: none;
   border: none;
   width: 240px;
 }
 
-input[type=range]::-webkit-slider-thumb {
+.upload__filter-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 2px solid $crimson;
   width: 14px;
@@ -75,21 +76,10 @@ input[type=range]::-webkit-slider-thumb {
   transform: translateY(-50%);
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+.upload__filter-range::-webkit-slider-runnable-track {
   height: 2px;
   background: #000000;
   border: none;
-}
-
-/* Кнопки "Запостить" и "Отмена" (Каталог) */
-.upload__button {
-  border: 0;
-  border-radius: 30px;
-  padding: 20px 0;
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 700;
-  width: 280px;
 }
 
 // Блок кнопок
@@ -99,6 +89,18 @@ input[type=range]::-webkit-slider-runnable-track {
   align-items: center;
   margin-top: 66px;
   row-gap: 20px;
+}
+
+/* Кнопки "Запостить" и "Отмена" (Каталог) */
+.upload__button {
+  border: 0;
+  border-radius: 30px;
+  padding: 20px 5px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  width: 280px;
+  word-break: break-all;
 }
 
 /* Запостить */
@@ -185,11 +187,11 @@ input[type=range]::-webkit-slider-runnable-track {
     }
   }
 
-  .upload__filter-range {
+  .upload__filter-range--mob {
     display: none;
   }
 
-  input[type=range] {
+  .upload__filter-range {
     width: 200px;
   }
 
@@ -212,7 +214,6 @@ input[type=range]::-webkit-slider-runnable-track {
 
 /* Desktop */
 @media (min-width: $desktop-width) {
-
   .upload__container {
     padding: 55px 60px 55px 80px;
   }

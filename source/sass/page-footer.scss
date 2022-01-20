@@ -11,11 +11,15 @@
   row-gap: 40px;
 }
 
-.footer__developed {
+.page-footer__developed {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+
+.page-footer__text {
+  word-break: break-all;
 }
 
 /* Планшет */
