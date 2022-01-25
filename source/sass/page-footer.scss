@@ -11,6 +11,21 @@
   row-gap: 40px;
 }
 
+.page-footer__pink-logo {
+  &:hover {
+    fill: $crimson;
+  }
+
+  &:active {
+    fill: $darkblue;
+    opacity: 0.3;
+  }
+}
+
+.page-footer__pink-logo--visible-desktop {
+  display: none;
+}
+
 .page-footer__developed {
   display: flex;
   align-items: center;
@@ -20,6 +35,16 @@
 
 .page-footer__text {
   word-break: break-all;
+}
+
+.page-footer__icon-htmlacademy {
+  &:hover {
+    fill: $darkblue;
+  }
+
+  &:active {
+    fill: rgba($darkblue, 0.3);
+  }
 }
 
 /* Планшет */
@@ -35,5 +60,13 @@
 @media (min-width: $desktop-width) {
   .page-footer {
     padding: 70px 0 87px;
+  }
+
+  .page-footer__pink-logo--visible-tablet {
+    display: none;
+  }
+
+  .page-footer__pink-logo--visible-desktop {
+    display: block;
   }
 }
