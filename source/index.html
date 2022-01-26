@@ -33,7 +33,7 @@
           <button class="main-nav__toggle" type="button" id="toggle-button" aria-label="Меню"></button>
         </div>
         <!-- Меню -->
-        <ul class="main-nav__list reset-style-list main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list reset-style-list">
           <li class="main-nav__item main-nav__item--current">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
@@ -284,14 +284,11 @@
           <address class="contacts__adress-text contacts__item">ул. Большая <br> Конюшенная, 19/8</address>
         </div>
       </div>
-      <picture>
-        <source media="(min-width: 1200px)"
-          srcset="./img/contacts/map-desktop.jpg 1x, ./img/contacts/map@2x-desktop.jpg 2x">
-        <source media="(min-width: 660px)"
-          srcset="./img/contacts/map-tablet.jpg 1x, ./img/contacts/map@2x-tablet.jpg 2x">
-        <img class="contacts__map" src="./img/contacts/map-mobile.jpg" srcset="./img/contacts/map@2x-mobile.jpg 2x"
-          alt="Map">
-      </picture>
+
+      <!-- Интерактивная карта -->
+      <iframe class="contacts__map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A1d6acfc73a65fb13734e92776081f67fc40af818501e2a33159872e1ca5bbd63&amp;source=constructor"
+        frameborder="0"></iframe>
     </div>
   </main>
 
@@ -345,7 +342,7 @@
       </div>
       <div class="page-footer__developed">
         <span class="page-footer__text">Разработано</span>
-        <svg class="page-footer__icon-htmlacademy" width="27" height="34" fill="#283645">
+        <svg class="page-footer__icon-htmlacademy" width="27" height="34" fill="#D22856">
           <use href="./img/sprite.svg#icon-htmlacademy"></use>
         </svg>
 

@@ -14,43 +14,44 @@
 <body class="page">
 
   <!-- Header -->
-  <section class="page-wrapper">
-    <div class="cover-main__wrapper">
-      <header class="page-header">
-        <div class="page-header__wrapper center">
-          <a class="page-header__logo" href="##">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="./img/icons/logotype-white-desktop.svg">
-              <source media="(min-width: 660px)" srcset="./img/icons/logotype-white-tablet.svg">
-              <img src="./img/icons/pink-icon-mobile.svg" alt="Pink">
-            </picture>
+  <header class="page-header">
+    <div class="page-header__nav-wrapper">
+      <nav class="page-header__main-nav">
+        <div class="main-nav__logo-wrapper center">
+          <!-- Logo Pink -->
+          <a class="header-logo" aria-label="Логотип сайта Pink">
+            <svg class="header-logo__image header-logo__image--mobile" width="74" height="23" fill="#ffffff">
+              <use href="./img/sprite.svg#logo-white-mobile"></use>
+            </svg>
+            <svg class="header-logo__image header-logo__image--tablet" width="146" height="40" fill="#ffffff">
+              <use href="./img/sprite.svg#logo-white-tablet"></use>
+            </svg>
+            <svg class="header-logo__image header-logo__image--desktop" width="146" height="40" fill="#ffffff">
+              <use href="./img/sprite.svg#logo-white-desktop"></use>
+            </svg>
           </a>
-          <nav class="main-nav main-nav--closed main-nav--nojs">
-            <button class="main-nav__toggle" type="button" aria-label="Меню">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list reset-style-list">
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="index.html">Главная</a>
-                </li>
-                <li class="main-nav__item main-nav__item--current">
-                  <a class="main-nav__link" href="catalog.html">Фотографии</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="form.html">Конкурс</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="##">HTML&nbsp;Academy</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+
+          <button class="main-nav__toggle" type="button" id="toggle-button" aria-label="Меню"></button>
         </div>
-      </header>
-      <h2 class="cover-main__title cover-main__title-catalog">Фотографии <br> пользователей</h2>
+        <!-- Меню -->
+        <ul class="main-nav__list reset-style-list">
+          <li class="main-nav__item main-nav__item--current">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="##">HTML&nbsp;Academy</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </section>
+    <h1 class="visually-hidden">Приложение Pink</h1>
+  </header>
 
   <!-- Main -->
   <main class="page-catalog">

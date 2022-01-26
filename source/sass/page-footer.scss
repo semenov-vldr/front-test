@@ -20,10 +20,10 @@
     fill: $darkblue;
     opacity: 0.3;
   }
-}
 
-.page-footer__pink-logo--visible-desktop {
-  display: none;
+  &--visible-desktop {
+    display: none;
+  }
 }
 
 .page-footer__developed {

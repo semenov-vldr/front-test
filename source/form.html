@@ -10,45 +10,44 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-mobile-32.ico">
 </head>
 
-<body class="page-body">
-  <!-- Header -->
-  <section class="cover-main">
-    <div class="cover-main__wrapper">
-      <header class="page-header">
-        <div class="page-header__wrapper center">
-          <a class="page-header__logo" href="##">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="./img/icons/logotype-white-desktop.svg" >
-              <source media="(min-width: 660px)" srcset="./img/icons/logotype-white-tablet.svg">
-              <img src="./img/icons/pink-icon-mobile.svg" alt="Pink">
-            </picture>
-          </a>
-          <nav class="main-nav main-nav--closed main-nav--nojs">
-            <button class="main-nav__toggle" type="button" aria-label="Меню">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list reset-style-list">
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="index.html">Главная</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="catalog.html">Фотографии</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link main-nav__item--current" href="form.html">Конкурс</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="##">HTML&nbsp;Academy</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
+<header class="page-header">
+  <div class="page-header__nav-wrapper">
+    <nav class="page-header__main-nav main-nav">
+      <div class="main-nav__logo-wrapper center">
+        <!-- Logo Pink -->
+        <a class="header-logo" aria-label="Логотип сайта Pink">
+          <svg class="header-logo__image header-logo__image--mobile" width="74" height="23" fill="#ffffff">
+            <use href="./img/sprite.svg#logo-white-mobile"></use>
+          </svg>
+          <svg class="header-logo__image header-logo__image--tablet" width="146" height="40" fill="#ffffff">
+            <use href="./img/sprite.svg#logo-white-tablet"></use>
+          </svg>
+          <svg class="header-logo__image header-logo__image--desktop" width="146" height="40" fill="#ffffff">
+            <use href="./img/sprite.svg#logo-white-desktop"></use>
+          </svg>
+        </a>
+
+        <button class="main-nav__toggle" type="button" id="toggle-button" aria-label="Меню"></button>
+      </div>
+      <!-- Меню -->
+      <ul class="main-nav__list reset-style-list">
+        <li class="main-nav__item main-nav__item--current">
+          <a class="main-nav__link" href="index.html">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Фотографии</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Конкурс</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="##">HTML&nbsp;Academy</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
       <h2 class="cover-main__title cover-main__title-form">Конкурс на самое <br> безбашенное <br> путешествие с Пинк</h2>
-    </div>
-  </section>
 
   <!-- Main -->
   <main class="page-form">
