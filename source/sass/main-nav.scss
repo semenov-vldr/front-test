@@ -117,6 +117,7 @@
     }
   }
 
+  // Список меню за пределами страницы
   .main-nav__list.active {
     transform: translateY(0);
   }
@@ -134,6 +135,10 @@
 @media (min-width: $desktop-width) {
   .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav__logo-wrapper {
+    padding: 0;
   }
 
   .main-nav__list {

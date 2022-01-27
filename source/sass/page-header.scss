@@ -10,6 +10,11 @@
   }
 }
 
+.page-header__catalog,
+.page-header__form {
+  min-height: 237px;
+}
+
 .page-header__nav-wrapper {
   background-color: rgba(#000000, 0.3);
 }
@@ -82,6 +87,7 @@
   }
 }
 
+// Заголовок главной страницы
 .store__title {
   position: absolute;
   top: 0;
@@ -97,6 +103,17 @@
   & br {
     display: none;
   }
+}
+
+// Заголовок страницы Каталог
+.page-header__title-catalog,
+.page-header__title-form {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 36px;
 }
 
 /* OS */
@@ -175,6 +192,15 @@
   .store__description {
     font-size: 18px;
   }
+
+
+  .page-header__title-catalog,
+  .page-header__title-form {
+    font-size: 50px;
+    line-height: 68px;
+    margin-top: 81px;
+  }
+
 }
 
 
