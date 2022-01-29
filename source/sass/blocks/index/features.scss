@@ -2,7 +2,7 @@
 .features {
   background-color: $lightgrey;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 75px;
   position: relative;
 
   &::after {
@@ -23,7 +23,7 @@
 .features__list {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 15px;
 
   &::after {
     content: "";
@@ -61,11 +61,16 @@
 
 /* Планшет */
 @media (min-width: $tablet-width) {
+  .features {
+    padding-top: 68px;
+  }
+
   .features__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
     padding-bottom: 30px;
+    row-gap: 18px;
 
 
     &::after {
@@ -102,7 +107,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 50px;
+    padding-top: 63px;
     padding-bottom: 50px;
     background-color: #ffffff;
     justify-content: start;
@@ -133,6 +138,11 @@
     font-size: 30px;
     line-height: 36px;
     width: 170px;
+    margin-bottom: 0;
+  }
+
+  .features__study-text {
+    margin: 10px 0;
   }
 
   .features__study-link {
@@ -143,8 +153,19 @@
 
 /* Desktop */
 @media (min-width: $desktop-width) {
+  .features {
+    padding-top: 0;
+
+    &::after {
+      background-size: 100% 92px;
+    }
+  }
+
   .features__list {
+    position: relative;
+    z-index: 2;
     grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 10px;
 
     &::after {
       display: none;
@@ -170,17 +191,17 @@
   .features__item-2,
   .features__item-3 {
     position: relative;
-  }
 
-  .features__item-1::before,
-  .features__item-2::before,
-  .features__item-3::before {
-    content: "";
-    display: block;
-    width: 300px;
-    height: 382px;
-    background-repeat: no-repeat;
-    background-position: center;
+    &::before {
+      content: "";
+      display: block;
+      width: 300px;
+      height: 382px;
+      margin-top: -40px;
+      margin-bottom: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .features__item-1::before {
@@ -213,23 +234,50 @@
     text-align: center;
   }
 
+  .features__text {
+    font-size: 18px;
+    margin-top: 25px;
+    line-height: 30px;
+    width: 252px;
+  }
+
   .features__study {
+    grid-template-columns: 1fr 570px;
     background-color: $lightgrey;
     min-height: 430px;
+    padding-top: 88px;
 
     &::after {
       background-size: 298px 345px;
-      bottom: 20px;
       width: 298px;
       height: 345px;
+      bottom: 45px;
     }
   }
 
   .features__study-title {
     width: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    & br {
+      display: none;
+    }
   }
 
-  .features__study-text br {
-    display: none;
+  .features__study-text {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .features__study-link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

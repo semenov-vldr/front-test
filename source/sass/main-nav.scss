@@ -11,6 +11,13 @@
   transition: transform 0.2s;
 }
 
+.main-nav__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 66px;
+}
+
 /* Пункт меню */
 .main-nav__item {
   background-color: $darkblue;
@@ -126,6 +133,10 @@
 
 /* Планшет */
 @media (min-width: $tablet-width) {
+  .main-nav__logo-wrapper {
+    min-height: 110px;
+  }
+
   .main-nav__list {
     padding-top: 110px;
   }
@@ -145,11 +156,12 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    // width: 620px;
+    // flex-wrap: wrap;
+    width: 620px;
     padding-top: 0;
     line-height: 18px;
     background-color: transparent;
+    transform: translateY(0);
   }
 
   .main-nav__item {

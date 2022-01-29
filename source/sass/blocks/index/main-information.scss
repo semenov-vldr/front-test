@@ -4,7 +4,7 @@
 }
 
 .main-information__titles {
-  padding: 46px 0 70px 0;
+  padding: 36px 0 38px 0;
 }
 
 .main-information__title {
@@ -15,12 +15,17 @@
   margin: 0;
 
   &:not(:last-child) {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 }
 
 /* Планшет */
 @media (min-width: $tablet-width) {
+
+  .main-information__titles {
+    padding: 45px 0 38px 0;
+  }
+
   .main-information__title {
     font-size: 40px;
     line-height: 54px;
@@ -28,5 +33,17 @@
     &:not(:last-child) {
       margin-bottom: 0;
     }
+  }
+}
+
+/* Desktop */
+@media (min-width: $desktop-width) {
+  .main-information__titles {
+    padding: 60px 0 55px;
+  }
+
+  .main-information__title {
+    font-size: 50px;
+    line-height: 68px;
   }
 }

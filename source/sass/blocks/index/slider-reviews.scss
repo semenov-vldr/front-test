@@ -1,7 +1,7 @@
 .slider-reviews {
   position: relative;
   background-color: #ffffff;
-  padding: 50px 0;
+  padding: 52px 0 35px 0;
 }
 
 .slider-reviews__author {
@@ -23,9 +23,16 @@
   margin: 0;
 }
 
+.slider-reviews__quote-text {
+  margin-bottom: 30px;
+}
+
 /* Блок пагинации */
 .slider-reviews__dots {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
 }
 
 /* Элемент пагинации */
@@ -38,10 +45,6 @@
   border-radius: 50%;
   background-color: rgba($darkblue, 0.3);
 
-  &:not(:last-child) {
-    margin-right: 19px;
-  }
-
   &:hover {
     background-color: rgba($darkblue, 0.6);
   }
@@ -49,7 +52,6 @@
   &:active {
     background-color: rgba($darkblue, 0.1);
   }
-
 
   // Активный элемент пагинации
   &--current {
@@ -76,12 +78,17 @@
 /* Планшет */
 @media (min-width: $tablet-width) {
   .slider-reviews {
-    padding-top: 100px;
+    padding-top: 55px;
+    padding-bottom: 10px;
   }
 
   .slider-reviews__item {
     display: flex;
     flex-direction: column;
+  }
+
+  .slider-reviews__author {
+    letter-spacing: 1.5px;
   }
 
   .slider-reviews__author-details {
@@ -93,7 +100,7 @@
   .slider-reviews__quote {
     order: -1;
     margin: 0 auto;
-    margin-bottom: 35px;
+    margin-bottom: 5px;
   }
 
   .slider-reviews__quote-text {
@@ -106,7 +113,7 @@
   }
 
   .slider-reviews__dots {
-    margin-top: 35px;
+    margin-top: 40px;
   }
 }
 

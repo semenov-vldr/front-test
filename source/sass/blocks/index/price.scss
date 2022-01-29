@@ -1,7 +1,7 @@
 /* Cама секция */
 .price {
   margin: 0 auto;
-  padding: 109px 0 31px;
+  padding: 102px 0 48px;
   background-color: $lightgrey;
   position: relative;
 
@@ -139,8 +139,11 @@
 
 // Пагинация
 .price__slider {
-  text-align: center;
-  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  column-gap: 15px;
 }
 
 // Dots
@@ -152,10 +155,6 @@
   cursor: pointer;
   border-radius: 50%;
   background-color: rgba($darkblue, 0.3);
-
-  &:not(:last-child) {
-    margin-right: 19px;
-  }
 
   &:hover {
     background-color: rgba($darkblue, 0.6);
@@ -185,7 +184,7 @@
 @media (min-width: $tablet-width) {
   .price {
     width: 100%;
-    padding: 112px 0 65px;
+    padding: 102px 0 65px;
 
     &::after {
       background-size: 100% 55px;

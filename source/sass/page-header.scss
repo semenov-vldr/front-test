@@ -1,12 +1,13 @@
 .page-header {
   position: relative;
-  background-color: #1D2631;
-  background-image: url(../img/main/back-wallpaper.jpg);
-  background-size: 320px 462px;
+  background-color: #1d2631;
+  background-image: url(../img/main/back-mobile.jpg);
+  background-size: 700px 462px;
   background-repeat: no-repeat;
+  background-position: 50% 0;
 
   @media (min-resolution: 2dppx) {
-    background-image: url(../img/main/back-wallpaper@2x.jpg);
+    // background-image: url(../img/main/back-wallpaper@2x.jpg);
   }
 }
 
@@ -19,12 +20,7 @@
   background-color: rgba(#000000, 0.3);
 }
 
-.main-nav__logo-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 66px;
-}
+
 
 .header-logo__image {
   position: relative;
@@ -35,7 +31,7 @@
   }
 
   &:active {
-    fill: rgba(#fff, 0.3);
+    fill: rgba(#ffffff, 0.3);
   }
 }
 
@@ -45,11 +41,13 @@
 }
 
 .page-header__store {
-  padding: 424px 20px 30px;
+  padding-top: 418px;
+  padding-bottom: 30px;
   background-image: url(../img/main/iphone-hand-mobile.png);
   background-size: 320px 286px;
-  background-position: 20px 110px;
+  background-position: 0 110px;
   background-repeat: no-repeat;
+  // width: 280px;
 
   @media (min-resolution: 2dppx) {
     background-image: url(../img/main/iphone-hand-mobile@2x.png);
@@ -73,7 +71,7 @@
   border: 3px solid #ffffff;
   padding: 18px 35px;
   border-radius: 29px;
-  margin: 0 auto 38px;
+  margin: 0 auto;
   word-break: break-all;
 
   &:hover {
@@ -83,7 +81,7 @@
 
   &:active {
     background-color: #ffffff;
-    color: rgba($crimson, $alpha: 0.3);
+    color: rgba($crimson, 0.3);
   }
 }
 
@@ -97,7 +95,7 @@
   font-weight: 300;
   text-align: center;
   margin: 0;
-  margin-top: 95px;
+  margin-top: 85px;
   width: 280px;
 
   & br {
@@ -123,7 +121,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 35px;
-  margin: 32px 0 23px;
+  margin: 30px 0 15px;
 }
 
 /* Доступно для Iphone... */
@@ -145,10 +143,6 @@
     @media (min-resolution: 2dppx) {
       background-image: url(../img/main/back-tablet@2x.jpg);
     }
-  }
-
-  .main-nav__logo-wrapper {
-    min-height: 110px;
   }
 
   .header-logo__image--mobile {
@@ -189,10 +183,14 @@
     margin: 0;
   }
 
+  .store__list {
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
+
   .store__description {
     font-size: 18px;
   }
-
 
   .page-header__title-catalog,
   .page-header__title-form {
@@ -200,7 +198,6 @@
     line-height: 68px;
     margin-top: 81px;
   }
-
 }
 
 
@@ -228,11 +225,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 940px;
+    margin: 0 auto;
   }
 
   .page-header__store {
-    min-height: 645px;
-    padding-top: 93px;
+    min-height: 745px;
+    padding-top: 100px;
     background-image: url(../img/main/iphone-hand-desktop.png);
     background-size: 1050px 645px;
     background-position: right bottom;
@@ -242,4 +241,18 @@
     }
   }
 
+  .store__title {
+    font-size: 50px;
+    line-height: 68px;
+    margin-bottom: 35px;
+  }
+
+  .store__button {
+    letter-spacing: 1px;
+  }
+
+  .store__list {
+    margin-top: 65px;
+    margin-bottom: 43px;
+  }
 }
