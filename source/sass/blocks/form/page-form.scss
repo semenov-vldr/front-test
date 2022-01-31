@@ -196,6 +196,7 @@
 // Поле для комментария
 .form__user-comment-area {
   width: 100%;
+  min-height: 200px;
   text-align: center;
   padding: 20px 19px;
   font-size: 18px;
@@ -253,6 +254,11 @@
   & span {
     color: $crimson;
   }
+}
+
+.form__prompt .form__prompt-desktop {
+  display: none;
+  color: $darkblue;
 }
 
 
@@ -406,6 +412,7 @@
 
   .form__user-comment-area {
     min-width: 496px;
+    min-height: 190px;
     margin: 0 auto;
     padding: 20px 10px;
   }
@@ -435,10 +442,9 @@
   .form__user {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 54px 74px;
+    gap: 54px 4px;
     align-items: center;
     margin: 0 auto;
-    width: 1200px;
   }
 
   .form__title,
@@ -447,37 +453,52 @@
     grid-column: 1 / -1;
   }
 
+  .form__title {
+    width: 765px;
+
+    & br {
+      display: none;
+    }
+  }
+
   .form__wrapper {
     padding: 0 130px;
 
     &--name {
       grid-column: 1/2;
-      padding: 0;
-      padding-left: 130px;
+      padding-right: 0;
     }
 
     &--os {
       grid-column: 2/3;
-      padding: 0;
-      padding-right: 130px;
+      padding-left: 0;
     }
   }
 
 
   .form__user-item--contact {
     flex-direction: row;
-    padding: 44px 62px 13px 62px;
+    padding: 28px 62px 13px 62px;
     column-gap: 74px;
+  }
+
+  .form__user-item--comment {
+    padding-bottom: 35px;
   }
 
   .form__user-item-input {
     width: 100%;
+    row-gap: 10px;
+  }
+
+  .form__user-os-list {
+    row-gap: 41px;
   }
 
   .form__user-progress-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 35px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .form__user-progress-item {
@@ -496,5 +517,16 @@
 
   .form__user-comment-area {
     text-align: left;
+    min-height: 130px;
+    padding: 15px 21px;
+  }
+
+  .form__button-wrapper {
+    padding-top: 12px;
+    padding-bottom: 0;
+  }
+
+  .form__prompt .form__prompt-desktop {
+    display: inline-block;
   }
 }
