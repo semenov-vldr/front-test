@@ -11,6 +11,13 @@
   overflow: hidden;
 }
 
+/* Сброс стилей списка */
+.reset-style-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .center {
   padding: 0 20px;
   margin: 0 auto;
@@ -18,15 +25,36 @@
   max-width: 1200px;
 }
 
+.br-mobile {
+  display: block;
+}
+
+.br-tablet,
+.br-desktop {
+  display: none;
+}
+
+/* Планшет */
+@media (min-width: $tablet-width) {
+  .br-mobile {
+    display: none;
+  }
+
+  .br-tablet {
+    display: block;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .center {
     padding: 0 130px;
   }
-}
 
-/* Сброс стилей списка */
-.reset-style-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  .br-tablet {
+    display: none;
+  }
+
+  .br-desktop {
+    display: block;
+  }
 }

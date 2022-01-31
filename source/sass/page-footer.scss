@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  padding-top: 5px;
+  padding-top: 7px;
 }
 
 .page-footer__text {
@@ -60,7 +60,7 @@
 /* Desktop */
 @media (min-width: $desktop-width) {
   .page-footer {
-    padding: 70px 0 87px;
+    padding: 72px 0 87px;
   }
 
   .page-footer__pink-logo--visible-tablet {
@@ -69,5 +69,10 @@
 
   .page-footer__pink-logo--visible-desktop {
     display: block;
+  }
+
+  .page-footer__text {
+    font-size: 18px;
+    line-height: 18px;
   }
 }

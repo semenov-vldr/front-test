@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-mobile-32.ico">
 </head>
 
-<header class="page-header page-header__form">
+<header class="page-header page-header--form">
   <div class="page-header__nav-wrapper">
     <nav class="page-header__main-nav main-nav">
       <div class="main-nav__logo-wrapper center">
@@ -47,7 +47,7 @@
     </nav>
   </div>
   <h1 class="visually-hidden">Форма "Pink"</h1>
-  <h2 class="page-header__title-form">Конкурс на самое <br> безбашенное <br> путешествие с Пинк</h2>
+  <h2 class="page-header__title-form center">Конкурс на самое <br> безбашенное <br> путешествие с Пинк</h2>
 
 </header>
 
@@ -74,7 +74,7 @@
         </div>
         <!-- Достижения (checkbox) -->
         <div class="form__wrapper form__wrapper--progress center">
-          <fieldset class="form__user-item">
+          <fieldset class="form__user-item form__user-item--progress">
             <legend class="form__user-item-title">Ваши безбашенные достижения в путешествии</legend>
             <ul class="form__user-progress-list reset-style-list">
 
@@ -143,7 +143,7 @@
 
         <!-- Выбор приложения (radio) -->
         <div class="form__wrapper form__wrapper--os center">
-          <fieldset class="form__user-item">
+          <fieldset class="form__user-item form__user-item--os">
             <legend class="form__user-item-title">С каким приложением pпутешествовали?</legend>
             <ul class="form__user-os-list reset-style-list">
 
@@ -178,11 +178,11 @@
 
         <!-- Окно комментариев -->
         <div class="form__wrapper form__wrapper--comment center">
-          <fieldset class="form__user-item">
+          <fieldset class="form__user-item form__user-item--comment">
             <legend class="form__user-item-title">Опишите свои эмоции</legend>
             <label class="form__user-control form__user-control--comment">
               <textarea class="form__user-comment-area" name="comment"
-                rows="6">Можно прям в красках, не стесняясь в выражениях</textarea>
+                rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </label>
           </fieldset>
         </div>
@@ -199,29 +199,46 @@
   <!-- Футер -->
   <footer class="page-footer">
     <div class="page-footer__wrapper center">
-      <a class="page-footer__logo" href="##">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="./img/icons/logotype-blue-desktop.svg">
-          <img class="page-footer_logo-image" src="./img/footer/footer-logo.svg" alt="pink">
-        </picture>
+      <a href="##">
+
+        <svg class="page-footer__pink-logo page-footer__pink-logo--visible-tablet" width="145" height="40">
+          <use href="./img/sprite.svg#logo-footer-mobile"></use>
+        </svg>
+
+        <svg class="page-footer__pink-logo page-footer__pink-logo--visible-desktop" width="147" height="40">
+          <use href="./img/sprite.svg#logo-footer-desktop"></use>
+        </svg>
+
       </a>
       <div class="social">
         <ul class="social__list reset-style-list">
+
+          <!-- Твиттер -->
           <li class="social__item">
             <a class="social__link" href="##">
-              <img class="social__icon" src="./img/footer/twitter-icon.svg" alt="twitter">
+              <svg class="social__icon" width="18" height="14" fill="#D22856">
+                <use href="./img/sprite.svg#icon-twitter"></use>
+              </svg>
               <span class="visually-hidden">Твиттер</span>
             </a>
           </li>
+
+          <!-- Фейсбук -->
           <li class="social__item">
             <a class="social__link" href="##">
-              <img class="social__icon" src="./img/footer/facebook-icon.svg" alt="facebook">
+              <svg class="social__icon" width="9" height="18" fill="#D22856">
+                <use href="./img/sprite.svg#icon-facebook"></use>
+              </svg>
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
+
+          <!-- Ютуб -->
           <li class="social__item">
             <a class="social__link" href="##">
-              <img class="social__icon" src="./img/footer/youtube-icon.svg" alt="youtube">
+              <svg class="social__icon" width="15" height="13" fill="#D22856">
+                <use href="./img/sprite.svg#icon-youtube"></use>
+              </svg>
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
@@ -229,7 +246,10 @@
       </div>
       <div class="page-footer__developed">
         <span class="page-footer__text">Разработано</span>
-        <img src="./img/footer/html-academy-icon.svg" alt="html-academy">
+        <svg class="page-footer__icon-htmlacademy" width="27" height="34" fill="#D22856">
+          <use href="./img/sprite.svg#icon-htmlacademy"></use>
+        </svg>
+
       </div>
     </div>
   </footer>

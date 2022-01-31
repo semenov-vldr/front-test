@@ -99,10 +99,6 @@
   }
 
 
-  .features__text br {
-    display: none;
-  }
-
   .features__study {
     position: relative;
     display: grid;
@@ -244,14 +240,14 @@
   .features__study {
     grid-template-columns: 1fr 570px;
     background-color: $lightgrey;
-    min-height: 430px;
-    padding-top: 88px;
+    min-height: 450px;
+    padding-top: 67px;
 
     &::after {
       background-size: 298px 345px;
       width: 298px;
       height: 345px;
-      bottom: 45px;
+      bottom: 65px;
     }
   }
 
@@ -259,21 +255,13 @@
     width: auto;
     margin-top: 0;
     margin-bottom: 0;
-
-    & br {
-      display: none;
-    }
   }
 
   .features__study-text {
     font-size: 18px;
     line-height: 30px;
-    margin-top: 20px;
+    margin-top: 23px;
     margin-bottom: 30px;
-
-    & br {
-      display: none;
-    }
   }
 
   .features__study-link {

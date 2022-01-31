@@ -9,18 +9,16 @@
   @media (min-resolution: 2dppx) {
     // background-image: url(../img/main/back-wallpaper@2x.jpg);
   }
-}
 
-.page-header__catalog,
-.page-header__form {
-  min-height: 237px;
+  &--catalog,
+  &--form {
+    min-height: 237px;
+  }
 }
 
 .page-header__nav-wrapper {
   background-color: rgba(#000000, 0.3);
 }
-
-
 
 .header-logo__image {
   position: relative;
@@ -47,59 +45,9 @@
   background-size: 320px 286px;
   background-position: 0 110px;
   background-repeat: no-repeat;
-  // width: 280px;
 
   @media (min-resolution: 2dppx) {
     background-image: url(../img/main/iphone-hand-mobile@2x.png);
-  }
-}
-
-.store__content {
-  width: 280px;
-  margin: 0 auto;
-}
-
-/* Ссылка "Скачайте приложение" */
-.store__button {
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 700;
-  border: 3px solid #ffffff;
-  padding: 18px 35px;
-  border-radius: 29px;
-  margin: 0 auto;
-  word-break: break-all;
-
-  &:hover {
-    background-color: #ffffff;
-    color: $crimson;
-  }
-
-  &:active {
-    background-color: #ffffff;
-    color: rgba($crimson, 0.3);
-  }
-}
-
-// Заголовок главной страницы
-.store__title {
-  position: absolute;
-  top: 0;
-  color: #ffffff;
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 300;
-  text-align: center;
-  margin: 0;
-  margin-top: 85px;
-  width: 280px;
-
-  & br {
-    display: none;
   }
 }
 
@@ -111,25 +59,7 @@
   line-height: 33px;
   color: #ffffff;
   text-align: center;
-  margin-top: 36px;
-}
-
-/* OS */
-.store__list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 35px;
-  margin: 30px 0 15px;
-}
-
-/* Доступно для Iphone... */
-.store__description {
-  font-weight: 300;
-  color: #ffffff;
-  text-align: center;
-  margin: 0;
+  margin-top: 28px;
 }
 
 /* Планшет */
@@ -142,6 +72,11 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url(../img/main/back-tablet@2x.jpg);
+    }
+
+    &--catalog,
+    &--form {
+      min-height: 440px;
     }
   }
 
@@ -165,38 +100,11 @@
     }
   }
 
-  .store__title {
-    position: relative;
-    width: auto;
-    margin-top: 0;
-    margin-bottom: 31px;
-    font-size: 40px;
-    line-height: 48px;
-
-    & br {
-      display: block;
-    }
-  }
-
-  .store__content {
-    width: 300px;
-    margin: 0;
-  }
-
-  .store__list {
-    margin-top: 40px;
-    margin-bottom: 25px;
-  }
-
-  .store__description {
-    font-size: 18px;
-  }
-
   .page-header__title-catalog,
   .page-header__title-form {
     font-size: 50px;
     line-height: 68px;
-    margin-top: 81px;
+    margin-top: 66px;
   }
 }
 
@@ -219,6 +127,16 @@
     @media (min-resolution: 2dppx) {
       background-image: url(../img/main/back-desktop@2x.jpg);
     }
+
+    &--catalog,
+    &--form {
+      min-height: 395px;
+    }
+  }
+
+  .page-header__title-catalog,
+  .page-header__title-form {
+    margin-top: 60px;
   }
 
   .page-header__main-nav {
@@ -239,20 +157,5 @@
     @media (min-resolution: 2dppx) {
       background-image: url(../img/main/iphone-hand-desktop@2x.png);
     }
-  }
-
-  .store__title {
-    font-size: 50px;
-    line-height: 68px;
-    margin-bottom: 35px;
-  }
-
-  .store__button {
-    letter-spacing: 1px;
-  }
-
-  .store__list {
-    margin-top: 65px;
-    margin-bottom: 43px;
   }
 }

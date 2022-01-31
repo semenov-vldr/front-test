@@ -10,7 +10,7 @@
 
 .upload__title {
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 30px 0;
   width: 280px;
   font-size: 14px;
   line-height: 30px;
@@ -20,8 +20,8 @@
 
 .upload__container {
   background-color: $lightgrey;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 33px;
+  padding-bottom: 42px;
 }
 
 .upload__photo {
@@ -35,11 +35,15 @@
   align-items: center;
   gap: 35px;
   flex-wrap: wrap;
-  margin: 43px 0 34px 0;
+  margin: 43px 0 30px 0;
 }
 
+// Range
 .upload__filter-range {
   position: relative;
+  -webkit-appearance: none;
+  border: none;
+  width: 240px;
   display: block;
   margin: 0 auto;
 
@@ -52,34 +56,39 @@
     height: 1px;
     background-color: rgba($darkblue, 0.1);
   }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid $crimson;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: 2px;
+    background: #000000;
+    border: none;
+  }
 }
 
 .upload__filter-item input {
   display: none;
 }
 
-// Range
-.upload__filter-range {
-  -webkit-appearance: none;
-  border: none;
-  width: 240px;
-}
+.upload__filter-icon {
+  color: rgba($darkblue, 0.3);
 
-.upload__filter-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: 2px solid $crimson;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  cursor: pointer;
-  transform: translateY(-50%);
-}
+  &:hover {
+    color: rgba($darkblue, 0.5);
+  }
 
-.upload__filter-range::-webkit-slider-runnable-track {
-  height: 2px;
-  background: #000000;
-  border: none;
+  &:active {
+    color: $crimson;
+  }
 }
 
 // Блок кнопок
@@ -87,25 +96,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 66px;
-  row-gap: 20px;
+  margin-top: 73px;
+  row-gap: 13px;
 }
 
-/* Кнопки "Запостить" и "Отмена" (Каталог) */
 .upload__button {
-  border: 0;
+  padding: 15px;
+  border: 3px solid;
   border-radius: 30px;
-  padding: 20px 5px;
-  font-size: 18px;
   line-height: 18px;
+  font-size: 18px;
   font-weight: 700;
-  width: 280px;
   word-break: break-all;
+  width: 280px;
 }
 
 /* Запостить */
 .upload__button--submit {
-  outline: 3px solid currentColor;
+  border-color: 3px solid currentColor;
   color: $crimson;
 
   &:hover {
@@ -120,7 +128,7 @@
 
 /* Отмена */
 .upload__button--reset {
-  outline: 3px solid currentColor;
+  border-color: 3px solid currentColor;
   color: rgba($darkblue, 0.1);
 
   &:hover {
@@ -143,20 +151,26 @@
   .upload__title {
     font-size: 18px;
     width: 422px;
+    padding: 65px 0 67px;
   }
 
   .upload__container {
     display: grid;
     grid-template-areas:
-    "A B"
-    "A C";
-    column-gap: 45px;
+      "A B"
+      "A C";
+    column-gap: 13px;
     padding-top: 57px;
-    padding-bottom: 54px;
+    padding-bottom: 56px;
   }
 
   .upload__photo-container {
     grid-area: A;
+  }
+
+  .upload__photo {
+    width: auto;
+    margin: 0;
   }
 
   .upload__filter {
@@ -165,11 +179,18 @@
 
   .upload__button-list {
     grid-area: C;
+    margin-top: auto;
+    row-gap: 20px;
+  }
+
+  .upload__button {
+    width: 260px;
   }
 
   .upload__filter-list {
     display: flex;
     flex-direction: column;
+    gap: 30px;
     margin: 0;
   }
 
@@ -180,19 +201,11 @@
     &::after {
       content: "";
       position: absolute;
-      top: 60px;
+      top: 55px;
       width: 100%;
       height: 1px;
       background-color: rgba($darkblue, 0.1);
     }
-  }
-
-  .upload__filter-range--mob {
-    display: none;
-  }
-
-  .upload__filter-range {
-    width: 200px;
   }
 
   .upload__filter-item input {
@@ -201,13 +214,20 @@
     background-color: transparent;
   }
 
-  .upload__button-list {
-    margin-top: auto;
-    row-gap: 30px;
+  .upload__filter-icon {
+    transform: scale(0.5);
   }
 
-  .upload__button {
-    width: 260px;
+  .upload__filter-range {
+    width: 200px;
+
+    &--mob {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -218,8 +238,34 @@
     padding: 55px 60px 55px 80px;
   }
 
+  .upload__title {
+    padding: 60px 0 67px 0;
+  }
+
   .upload__photo {
     width: 300px;
+  }
+
+  .upload__filter-item {
+    column-gap: 47px;
+
+    &::after {
+      top: 55px;
+      width: 410px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  .upload__filter-icon {
+    transform: scale(1);
+  }
+
+  .upload__filter-item input {
+    width: 288px;
+    margin-left: 0;
   }
 
   .upload__button-list {

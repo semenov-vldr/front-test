@@ -5,10 +5,10 @@
 @import "./page-header.scss";
 @import "./main-nav.scss";
 @import "./page-footer.scss";
-@import "./footer-social.scss";
+@import "./social.scss";
 
 // index
-@import "./blocks/index/cover-main.scss";
+@import "./blocks/index/store.scss";
 @import "./blocks/index/main-information.scss";
 @import "./blocks/index/features.scss";
 @import "./blocks/index/slider-reviews.scss";
@@ -18,4 +18,6 @@
 // catalog
 @import "./blocks/catalog/photo.scss";
 @import "./blocks/catalog/upload.scss";
+
+// form
 @import "./blocks/form/page-form.scss"

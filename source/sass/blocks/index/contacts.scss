@@ -68,6 +68,10 @@
   }
 }
 
+.contacts__map iframe {
+  border: none;
+}
+
 
 /* Планшет */
 @media (min-width: $tablet-width) {
@@ -131,15 +135,31 @@
 
 /* Desktop */
 @media (min-width: $desktop-width) {
+  .contacts {
+    padding-top: 57px;
+  }
+
   .contacts__wrapper {
-    display: grid;
+    padding-bottom: 15px;
+    row-gap: 40px;
+    column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       "A A A"
       "B D C";
   }
 
+  .contacts__main-title {
+    font-size: 50px;
+    line-height: 68px;
+  }
+
   .contacts__title {
-    margin-bottom: 30px;
+    margin-bottom: 21px;
+  }
+
+  .contacts__adress:last-child {
+    padding-top: 0;
   }
 
   .contacts__map {
