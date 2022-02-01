@@ -3,11 +3,11 @@ import browser from "browser-sync";
 import csso from "postcss-csso";
 import del from "del";
 import gulp from "gulp";
+import imagemin from "gulp-imagemin";
 import plumber from "gulp-plumber";
 import postcss from "gulp-postcss";
 import rename from "gulp-rename";
 import sass from "gulp-dart-sass";
-import squoosh from "gulp-libsquoosh";
 import svgo from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
 import webp from "gulp-webp";
@@ -45,7 +45,7 @@ const scripts = () => {
 const optimizeImages = () => {
   return gulp
     .src("source/img/**/*.{png,jpg}")
-    .pipe(squoosh())
+    .pipe(imagemin())
     .pipe(gulp.dest("build/img"));
 };
 
