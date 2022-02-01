@@ -3,9 +3,9 @@
   background-color: #ffffff;
 }
 
-.form__user {
-  display: grid;
-}
+// .form__user {
+//   display: grid;
+// }
 
 .form__title {
   font-size: 14px;
@@ -128,7 +128,6 @@
   color: $crimson;
   text-align: center;
   padding-top: 44px;
-  white-space: nowrap;
   word-break: break-all;
 
   &--contact {
@@ -201,6 +200,7 @@
   padding: 20px 19px;
   font-size: 18px;
   line-height: 30px;
+  resize: none;
 
   &::placeholder {
     color: $darkblue;
@@ -282,6 +282,7 @@
   }
 
   .form__user {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(616px, 1fr));
     row-gap: 23px;
   }
