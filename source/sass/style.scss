@@ -2,11 +2,11 @@
 @import "./main-styles.scss";
 @import "./helpers.scss";
 @import "./font.scss";
-@import "./page-header.scss";
-@import "./header-logo.scss";
-@import "./main-nav.scss";
-@import "./page-footer.scss";
-@import "./social.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/header-logo.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/page-footer.scss";
+@import "./blocks/social.scss";
 
 // index
 @import "./blocks/index/store.scss";
@@ -24,4 +24,3 @@
 @import "./blocks/form/page-form.scss";
 @import "./blocks/form/modal-err.scss";
 @import "./blocks/form/modal-ok.scss"
-

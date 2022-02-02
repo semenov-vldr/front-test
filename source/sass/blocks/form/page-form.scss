@@ -404,16 +404,17 @@
     row-gap: 12px;
     column-gap: 17px;
 
-    // &::after {
-    //   content: "";
-    //   width: 59px;
-    //   height: 59px;
-    //   right: 2px;
-    //   top: 2px;
-    //   background-position: center;
-    //   background-repeat: no-repeat;
-    //   background-size: 20px auto;
-    // }
+    &--tel::after,
+    &--email::after {
+      content: "";
+      width: 59px;
+      height: 59px;
+      right: 2px;
+      top: 2px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px auto;
+    }
 
     &--tel,
     &--email {
