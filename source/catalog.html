@@ -4,9 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Pink Catalog</title>
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="../build/css/style.min.css">
   <link rel="icon" href="./img/favicon/favicon-mobile.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-mobile-32.ico">
 </head>
@@ -34,7 +33,7 @@
           <button class="main-nav__toggle" type="button" id="toggle-button" aria-label="Меню"></button>
         </div>
         <!-- Меню -->
-        <ul class="main-nav__list reset-style-list">
+        <ul class="main-nav__list reset-style-list active">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
@@ -240,16 +239,14 @@
               </li>
 
               <li class="upload__filter-item">
-                <svg class="upload__filter-icon" width="48" height="43" fill="currentColor"
-                  >
+                <svg class="upload__filter-icon" width="48" height="43" fill="currentColor">
                   <use href="./img/sprite.svg#filter-fill"></use>
                 </svg>
                 <input class="upload__filter-range" type="range">
 
               </li>
               <li class="upload__filter-item">
-                <svg class="upload__filter-icon" width="32" height="32" fill="currentColor"
-                  >
+                <svg class="upload__filter-icon" width="32" height="32" fill="currentColor">
                   <use href="./img/sprite.svg#filter-contrast"></use>
                 </svg>
                 <input class="upload__filter-range" type="range">
@@ -273,11 +270,13 @@
     <div class="page-footer__wrapper center">
       <a href="##">
 
-        <svg class="page-footer__pink-logo page-footer__pink-logo--visible-tablet" width="145" height="40" fill="#283645">
+        <svg class="page-footer__pink-logo page-footer__pink-logo--visible-tablet" width="145" height="40"
+          fill="#283645">
           <use href="./img/sprite.svg#logo-footer-mobile"></use>
         </svg>
 
-        <svg class="page-footer__pink-logo page-footer__pink-logo--visible-desktop" width="147" height="40" fill="#283645">
+        <svg class="page-footer__pink-logo page-footer__pink-logo--visible-desktop" width="147" height="40"
+          fill="#283645">
           <use href="./img/sprite.svg#logo-footer-desktop"></use>
         </svg>
 

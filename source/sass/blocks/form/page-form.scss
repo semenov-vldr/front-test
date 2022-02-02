@@ -3,15 +3,11 @@
   background-color: #ffffff;
 }
 
-// .form__user {
-//   display: grid;
-// }
-
 .form__title {
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
-  padding-top: 54px;
+  padding-top: 45px;
   text-align: center;
 }
 
@@ -34,6 +30,31 @@
   row-gap: 29px;
   border: none;
   padding: 44px 0;
+
+  &--name {
+    border: none;
+    row-gap: 16px;
+    padding-top: 33px;
+    padding-bottom: 42px;
+  }
+
+  &--contact {
+    gap: 17px;
+    padding-top: 30px;
+    padding-bottom: 32px;
+  }
+
+  &--os {
+    padding: 35px 0 43px;
+  }
+
+  &--progress {
+    padding: 39px 0 38px;
+  }
+
+  &--comment {
+    padding: 14px 0 42px;
+  }
 }
 
 .form__user-input,
@@ -55,7 +76,8 @@
   line-height: 30px;
   text-transform: uppercase;
 
-  &--contact {
+  &--contact,
+  &--name {
     margin-left: 24px;
   }
 }
@@ -75,7 +97,7 @@
 .form__user-progress-list {
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+  row-gap: 39px;
 }
 
 /* Список достижений (checkbox) */
@@ -127,11 +149,16 @@
   text-transform: uppercase;
   color: $crimson;
   text-align: center;
-  padding-top: 44px;
+  padding-top: 38px;
   word-break: break-all;
+  line-height: 18px;
 
   &--contact {
     display: none;
+  }
+
+  &--os {
+    padding-top: 49px;
   }
 }
 
@@ -164,11 +191,11 @@
   border-radius: 50%;
   cursor: pointer;
 
-  &:hover::before {
+  &:hover {
     border-color: $darkblue;
   }
 
-  &:active::before {
+  &:active {
     border-color: $crimson;
   }
 }
@@ -212,6 +239,7 @@
 /* Обертка кнопки "Отправить форму" */
 .form__button-wrapper {
   background-color: #ffffff;
+  padding-bottom: 19px;
 }
 
 .form__button--green {
@@ -238,7 +266,7 @@
 .form__button {
   width: 100%;
   padding: 23px 10px;
-  margin-bottom: 46px;
+  margin-bottom: 35px;
   cursor: pointer;
   word-break: break-all;
 }
@@ -249,6 +277,7 @@
   text-transform: uppercase;
   text-align: center;
   word-break: break-all;
+  margin: 0;
 
   // Звездочка (*)
   & span {
@@ -294,6 +323,8 @@
 
     &--name {
       order: 1;
+      padding-top: 20px;
+      padding-bottom: 0;
     }
 
     &--progress {
@@ -318,17 +349,18 @@
     gap: 56px;
     border: 2px solid #E5E5E5;
     border-radius: 1px;
-    padding: 27px 58px 53px;
+    padding: 27px 0 53px;
 
     &--name {
       border: none;
       row-gap: 52px;
-      padding: 0;
+      padding-top: 10px;
+      padding-bottom: 0;
     }
 
     &--contact {
       gap: 27px;
-      padding-bottom: 27px;
+      padding: 30px 56px 25px;
     }
 
     &--os {
@@ -340,7 +372,7 @@
     }
 
     &--comment {
-      padding-bottom: 47px;
+      padding: 30px 57px 47px;
     }
   }
 
@@ -359,23 +391,33 @@
     flex-grow: 1;
     column-gap: 20px;
     padding: 0;
+
+    &--name {
+      margin-left: 0;
+    }
   }
 
   .form__user-item-input {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     row-gap: 12px;
+    column-gap: 17px;
 
-    &::after {
-      content: "";
-      width: 59px;
-      height: 59px;
-      right: 2px;
-      top: 2px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 20px auto;
+    // &::after {
+    //   content: "";
+    //   width: 59px;
+    //   height: 59px;
+    //   right: 2px;
+    //   top: 2px;
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-size: 20px auto;
+    // }
+
+    &--tel,
+    &--email {
+      flex-direction: column;
     }
 
     &--tel::after {
@@ -415,7 +457,7 @@
     min-width: 496px;
     min-height: 190px;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 15px 10px;
   }
 
   .form__button-wrapper {
@@ -440,10 +482,11 @@
   .page-header__title-form br {
     display: none;
   }
+
   .form__user {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 54px 4px;
+    gap: 32px 70px;
     align-items: center;
     margin: 0 auto;
   }
@@ -457,8 +500,8 @@
   .form__title {
     width: 765px;
 
-    & br {
-      display: none;
+    & span {
+      display: inline-block;
     }
   }
 
@@ -476,15 +519,29 @@
     }
   }
 
+  .form__user-item {
+    &--name {
+      padding-top: 33px;
+      row-gap: 52px;
+    }
 
-  .form__user-item--contact {
-    flex-direction: row;
-    padding: 28px 62px 13px 62px;
-    column-gap: 74px;
+    &--os {
+      padding: 40px 0 34px;
+    }
+
+    &--contact {
+      flex-direction: row;
+      padding: 28px 62px 13px 62px;
+      column-gap: 74px;
+    }
+
+    &--comment {
+      padding-bottom: 35px;
+    }
   }
 
-  .form__user-item--comment {
-    padding-bottom: 35px;
+  .form__user-item-title--os {
+    white-space: nowrap;
   }
 
   .form__user-item-input {
@@ -494,6 +551,7 @@
 
   .form__user-os-list {
     row-gap: 41px;
+    padding-left: 74px;
   }
 
   .form__user-progress-list {

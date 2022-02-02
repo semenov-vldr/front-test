@@ -20,24 +20,6 @@
   background-color: rgba(#000000, 0.3);
 }
 
-.header-logo__image {
-  position: relative;
-  z-index: 2;
-
-  &:hover {
-    fill: $crimson;
-  }
-
-  &:active {
-    fill: rgba(#ffffff, 0.3);
-  }
-}
-
-.header-logo__image--tablet,
-.header-logo__image--desktop {
-  display: none;
-}
-
 .page-header__store {
   padding-top: 418px;
   padding-bottom: 30px;
@@ -80,14 +62,6 @@
     }
   }
 
-  .header-logo__image--mobile {
-    display: none;
-  }
-
-  .header-logo__image--tablet {
-    display: block;
-  }
-
   .page-header__store {
     min-height: 620px;
     padding-top: 93px;
@@ -108,17 +82,8 @@
   }
 }
 
-
 /* Desktop */
 @media (min-width: $desktop-width) {
-  .header-logo__image--tablet {
-    display: none;
-  }
-
-  .header-logo__image--desktop {
-    display: block;
-  }
-
   .page-header {
     background-image: url(../img/main/back-desktop.jpg);
     background-size: 1200px 853px;

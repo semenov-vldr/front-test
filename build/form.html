@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="../build/css/style.min.css">
   <link rel="icon" href="./img/favicon/favicon-mobile.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-mobile-32.ico">
 </head>
@@ -30,7 +30,7 @@
         <button class="main-nav__toggle" type="button" id="toggle-button" aria-label="Меню"></button>
       </div>
       <!-- Меню -->
-      <ul class="main-nav__list reset-style-list">
+      <ul class="main-nav__list reset-style-list active">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
         </li>
@@ -57,25 +57,28 @@
     <!-- Форма для пользователя -->
     <form class="form__user" action="https://echo.htmlacademy.ru/" method="post">
       <h3 class="form__title center">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
-        вашу бонусную карту! <br> Пожалуйста, заполните форму ниже:</h3>
+        вашу бонусную карту! <br class="br-tablet"> <span>Пожалуйста, заполните форму ниже:</span></h3>
       <!-- ФИО пользователя -->
       <div class="form__wrapper form__wrapper--name center">
         <fieldset class="form__user-item form__user-item--name">
-          <label class="form__user-label">Фамилия:
-            <input class="form__user-input" type="text" placeholder="Укажите фамилию *" name="surname" required>
-          </label>
-          <label class="form__user-label">Имя:
-            <input class="form__user-input" type="text" placeholder="Введите ваше имя *" name="name" required>
-          </label>
-          <label class="form__user-label">Отчество:
-            <input class="form__user-input" type="text" placeholder="Ну и отчество тоже" name="patronymic" required>
-          </label>
+          <div class="form__user-item-input form__user-item-input--surname">
+          <label class="form__user-label form__user-label--name" for="form-surname">Фамилия:</label>
+            <input class="form__user-input" type="text" placeholder="Укажите фамилию *" name="surname" id="form-surname" required>
+          </div>
+          <div class="form__user-item-input form__user-item-input--name">
+          <label class="form__user-label form__user-label--name" for="form-name">Имя:</label>
+            <input class="form__user-input" type="text" placeholder="Введите ваше имя *" name="name" id="form-name" required>
+          </div>
+          <div class="form__user-item-input form__user-item-input--patronymic">
+          <label class="form__user-label form__user-label--name" for="form-patronymic">Отчество:</label>
+            <input class="form__user-input" type="text" placeholder="Ну и отчество тоже" name="patronymic" id="form-patronymic" required>
+          </div>
         </fieldset>
       </div>
       <!-- Достижения (checkbox) -->
       <div class="form__wrapper form__wrapper--progress center">
         <fieldset class="form__user-item form__user-item--progress">
-          <legend class="form__user-item-title">Ваши безбашенные достижения в путешествии</legend>
+          <legend class="form__user-item-title">Ваши безбашенные <br class="br-mobile"> достижения в путешествии</legend>
           <ul class="form__user-progress-list reset-style-list">
 
             <li class="form__user-progress-item">
@@ -143,7 +146,7 @@
       <!-- Выбор приложения (radio) -->
       <div class="form__wrapper form__wrapper--os center">
         <fieldset class="form__user-item form__user-item--os">
-          <legend class="form__user-item-title">С каким приложением pпутешествовали?</legend>
+          <legend class="form__user-item-title form__user-item-title--os">С каким приложением <br class="br-mobile"> путешествовали?</legend>
           <ul class="form__user-os-list reset-style-list">
 
             <li class="form__user-os-item">
