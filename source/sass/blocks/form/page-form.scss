@@ -111,6 +111,10 @@
   display: inline-flex;
   align-items: center;
 
+  &:focus {
+    outline: 2px dashed $crimson;
+  }
+
   // Квадрат для чекбокса
   &::before {
     content: "";
@@ -193,6 +197,10 @@
 
   &:hover {
     border-color: $darkblue;
+  }
+
+  &:focus {
+    border:2px dashed $crimson;
   }
 
   &:active {
@@ -486,10 +494,10 @@
 
   .form__user {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     gap: 32px 70px;
     align-items: center;
     margin: 0 auto;
+    max-width: 1200px;
   }
 
   .form__title,
@@ -533,7 +541,12 @@
     &--contact {
       flex-direction: row;
       padding: 28px 62px 13px 62px;
-      column-gap: 74px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      & .form__user-item-input {
+        width: 370px;
+      }
     }
 
     &--comment {
@@ -562,6 +575,8 @@
   }
 
   .form__user-progress-item {
+    width: 260px;
+
     &:nth-child(even) {
       order: 2;
     }
