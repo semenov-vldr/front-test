@@ -35,7 +35,6 @@ const scripts = () => {
     .pipe(terser())
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("dist/js"))
-    .pipe(browser.stream());
   };
 
 
