@@ -8,7 +8,6 @@ function dragTab () {
     div.addEventListener('mousedown', mouseDown);
     div.addEventListener('mouseup', mouseUp); // событие с отпущенной клавишей мышки
 
-
     function mouseMove (evt) {
       if (z == true) {
         div.scrollLeft -= evt.clientX-x1;

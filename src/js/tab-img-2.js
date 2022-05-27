@@ -1,7 +1,7 @@
 function dragTab () {
     let div = document.querySelector('.tab2-content'),
-        x1 = null,
-        y1 = null,
+        x1 = 0,
+        y1 = 0,
         z = false;
 
     div.addEventListener('mouseover', mouseOver);
@@ -15,13 +15,12 @@ function dragTab () {
             y1 = evt.clientY;
     };
 
-
     function mouseMove (evt) {
       if (z == true) {
-        div.scrollLeft -= evt.clientX-x1;
-        div.scrollTop -= evt.clientY-y1;
-        x1 = evt.clientX;
-        y1 = evt.clientY;
+        div.scrollLeft += evt.pageX-x1;
+        div.scrollTop += evt.pageY-y1;
+        x1 = evt.pageX;
+        y1 = evt.pageY;
       }
     };
 

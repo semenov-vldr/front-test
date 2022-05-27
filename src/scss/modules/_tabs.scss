@@ -66,4 +66,71 @@
     }
 }
 
+.tabs {
+
+    @media (max-width: $mobile-max) {
+        .dropdown-btn {
+            width: 100%;
+            height: 40px;
+            background-color: tomato;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .tab-header-wrap {
+            display: none;
+        }
+
+        & {
+            position: relative;
+        }
+
+        .tab-header-wrap.menu-active {
+            position: absolute;
+            text-align: center;
+            display: block;
+            width: 100%;
+            z-index: 1;
+            background-color: rgb(225, 225, 225);
+            border: 2px dashed tomato;
+            border-top: none;
+
+            animation: fade .3s linear;
+        }
+
+        @keyframes fade {
+            0% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+
+        .tab-header.active {
+            box-shadow: none;
+        }
+
+        .tab-header {
+            cursor: pointer;
+
+            &:hover {
+                background-color: tomato;
+                color: white;
+            }
+        }
+
+
+    }
+
+    @media (min-width: $tablet-min) {
+        .dropdown-btn {
+            display: none;
+        }
+    }
+
+}
+
 

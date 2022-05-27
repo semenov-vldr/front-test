@@ -9,6 +9,8 @@ import postcss from "gulp-postcss";
 import rename from "gulp-rename";
 import sass from "gulp-dart-sass";
 
+import terser from 'gulp-terser';
+
 
 export const styles = () => {
   return gulp
@@ -29,10 +31,11 @@ const html = () => {
 };
 
 const scripts = () => {
-    return gulp
-      .src("src/js/*.js")
-      .pipe(gulp.dest("dist/js"))
-      .pipe(browser.stream());
+    return gulp.src("src/js/*.js")
+    .pipe(terser())
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("dist/js"))
+    .pipe(browser.stream());
   };
 
 
@@ -74,7 +77,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("src/scss/**/*.scss", gulp.series(styles));
-  gulp.watch("src/js/*.js", gulp.series(scripts));
+  gulp.watch("src/js/**/*.js", gulp.series(scripts, reload));
   gulp.watch("src/*.html", gulp.series(html, reload));
 };
 
@@ -88,7 +91,12 @@ gulp.parallel(styles, html, scripts)
 
 export default gulp.series(
     clean,
-    gulp.parallel(styles, html, scripts, copyImages),
+    gulp.parallel(
+        styles,
+        html,
+        scripts,
+        copyImages
+        ),
     server,
     watcher
   );
